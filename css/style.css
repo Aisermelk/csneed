@@ -1,3 +1,4 @@
+```css
 /* ==========================================================
    CSNEED — ENGENHARIA & SOLUÇÕES
    STYLE.CSS
@@ -35,7 +36,6 @@
     --transicao: 0.3s ease;
 
     --container: 1180px;
-
 }
 
 
@@ -61,7 +61,6 @@ body {
         sans-serif;
 
     color: var(--texto);
-
     background: var(--branco);
 
     line-height: 1.6;
@@ -149,11 +148,9 @@ button {
     color: var(--laranja);
 
     font-size: 0.78rem;
-
     font-weight: 800;
 
     letter-spacing: 0.14em;
-
     text-transform: uppercase;
 }
 
@@ -201,11 +198,9 @@ button {
     padding: 0 26px;
 
     border: 2px solid transparent;
-
     border-radius: 8px;
 
     font-size: 0.92rem;
-
     font-weight: 800;
 
     text-align: center;
@@ -224,7 +219,6 @@ button {
 
 .btn-primary {
     background: var(--laranja);
-
     color: var(--branco);
 
     box-shadow:
@@ -243,7 +237,8 @@ button {
 
     color: var(--branco);
 
-    border-color: rgba(255, 255, 255, 0.5);
+    border-color:
+        rgba(255, 255, 255, 0.5);
 }
 
 .btn-outline:hover {
@@ -342,7 +337,6 @@ button {
         1px solid rgba(7, 27, 82, 0.08);
 
     backdrop-filter: blur(14px);
-
     -webkit-backdrop-filter: blur(14px);
 }
 
@@ -359,7 +353,6 @@ button {
     display: flex;
 
     align-items: center;
-
     justify-content: space-between;
 
     gap: 25px;
@@ -395,7 +388,6 @@ button {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     gap: 32px;
@@ -409,7 +401,6 @@ button {
     color: var(--azul);
 
     font-size: 0.9rem;
-
     font-weight: 700;
 
     padding: 8px 0;
@@ -480,7 +471,6 @@ button {
     padding: 9px;
 
     border: 0;
-
     border-radius: 8px;
 
     background: var(--azul);
@@ -510,7 +500,7 @@ button {
 
 
 /* ==========================================================
-   HERO
+   HERO — BANNER PRINCIPAL
 ========================================================== */
 
 .hero {
@@ -526,20 +516,70 @@ button {
 
     align-items: center;
 
+    /*
+       BANNER PRINCIPAL
+
+       O caminho abaixo deve apontar para a imagem
+       utilizada como capa do site.
+
+       Se o arquivo estiver em:
+       assets/images/banner.jpg
+
+       mantenha exatamente assim.
+    */
+
     background:
         linear-gradient(
-            115deg,
-            var(--azul-escuro) 0%,
-            var(--azul) 65%,
-            #0B286E 100%
-        );
+            90deg,
+            rgba(4, 19, 55, 0.94) 0%,
+            rgba(7, 27, 82, 0.78) 48%,
+            rgba(7, 27, 82, 0.38) 100%
+        ),
+        url("../assets/images/banner.jpg");
+
+    background-position:
+        center center;
+
+    background-size:
+        cover;
+
+    background-repeat:
+        no-repeat;
 
     color: var(--branco);
 
     overflow: hidden;
 }
 
+
+/*
+   CAMADA DE PROTEÇÃO DO BANNER
+   Ajuda a manter o texto legível.
+*/
+
 .hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 19, 55, 0.20) 0%,
+            transparent 60%
+        );
+
+    pointer-events: none;
+}
+
+
+/*
+   EFEITO DECORATIVO LARANJA
+*/
+
+.hero::after {
     content: "";
 
     position: absolute;
@@ -562,33 +602,15 @@ button {
     pointer-events: none;
 }
 
-.hero::after {
-    content: "";
 
-    position: absolute;
-
-    width: 500px;
-    height: 500px;
-
-    bottom: -350px;
-    left: -200px;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(255, 255, 255, 0.06),
-            transparent 68%
-        );
-
-    pointer-events: none;
-}
+/* ==========================================================
+   CONTEÚDO HERO
+========================================================== */
 
 .hero-container {
     position: relative;
 
-    z-index: 1;
+    z-index: 2;
 }
 
 .hero-content {
@@ -627,7 +649,7 @@ button {
     margin-bottom: 35px;
 
     color:
-        rgba(255, 255, 255, 0.78);
+        rgba(255, 255, 255, 0.82);
 
     font-size: 1.08rem;
 
@@ -748,7 +770,6 @@ button {
     flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
@@ -1059,7 +1080,6 @@ button {
     flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
@@ -1493,7 +1513,6 @@ button {
     width: auto;
 
     max-width: 190px;
-
     max-height: 60px;
 
     object-fit: contain;
@@ -1564,7 +1583,6 @@ button {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
@@ -1602,7 +1620,6 @@ button {
         grid-template-columns:
             repeat(2, 1fr);
     }
-
 }
 
 
@@ -1655,7 +1672,6 @@ button {
 
         gap: 45px;
     }
-
 }
 
 
@@ -1771,14 +1787,27 @@ button {
     }
 
 
-    /* HERO */
+    /* HERO MOBILE */
 
     .hero {
-        min-height: auto;
+        min-height: 650px;
 
         padding:
             140px 0
             85px;
+
+        background-position:
+            60% center;
+    }
+
+    .hero::before {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(4, 19, 55, 0.95) 0%,
+                rgba(7, 27, 82, 0.82) 70%,
+                rgba(7, 27, 82, 0.60) 100%
+            );
     }
 
     .hero h1 {
@@ -1903,7 +1932,6 @@ button {
         width: 28px;
         height: 28px;
     }
-
 }
 
 
@@ -1928,9 +1956,14 @@ button {
     }
 
     .hero {
+        min-height: 620px;
+
         padding:
             125px 0
             70px;
+
+        background-position:
+            62% center;
     }
 
     .hero h1 {
@@ -1969,7 +2002,6 @@ button {
         width: 27px;
         height: 27px;
     }
-
 }
 
 
@@ -2005,5 +2037,5 @@ textarea:focus-visible {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
-
 }
+```
