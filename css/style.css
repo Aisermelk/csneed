@@ -9,7 +9,6 @@
 ========================================================== */
 
 :root {
-
     --azul: #071B52;
     --azul-escuro: #041337;
 
@@ -25,7 +24,6 @@
     --borda: #E2E5EA;
 
     --container: 1200px;
-
     --raio: 6px;
 
     --sombra: 0 12px 35px rgba(4, 19, 55, 0.10);
@@ -51,10 +49,16 @@ html {
 }
 
 body {
+    margin: 0;
+    padding: 0;
+
     font-family: Arial, Helvetica, sans-serif;
+
     color: var(--texto);
     background: var(--branco);
+
     line-height: 1.6;
+
     overflow-x: hidden;
 }
 
@@ -73,7 +77,8 @@ button,
 input,
 textarea,
 select {
-    font: inherit;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 button {
@@ -87,7 +92,7 @@ ol {
 
 
 /* ==========================================================
-   3. CONTAINER
+   3. CONTAINERS
 ========================================================== */
 
 .container,
@@ -104,10 +109,11 @@ ol {
 
 .header {
     position: fixed;
-    z-index: 1000;
 
     top: 18px;
     left: 50%;
+
+    z-index: 1000;
 
     width: min(calc(100% - 36px), 1240px);
 
@@ -130,6 +136,7 @@ ol {
     min-height: 72px;
 
     display: grid;
+
     grid-template-columns: 1fr auto 1fr;
 
     align-items: center;
@@ -137,25 +144,35 @@ ol {
     padding: 10px 22px;
 }
 
+
+/* ==========================================================
+   5. LOGO
+========================================================== */
+
 .logo {
     display: flex;
     align-items: center;
 }
 
 .logo img {
+    display: block;
+
     width: auto;
+
     max-width: 170px;
     max-height: 52px;
+
     object-fit: contain;
 }
 
 
 /* ==========================================================
-   5. NAVEGAÇÃO
+   6. NAVEGAÇÃO
 ========================================================== */
 
 .nav {
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -172,7 +189,7 @@ ol {
 
     white-space: nowrap;
 
-    opacity: 0.9;
+    opacity: 0.90;
 
     transition: var(--transicao);
 }
@@ -204,13 +221,14 @@ ol {
 
 
 /* ==========================================================
-   6. BOTÃO DO HEADER
+   7. BOTÃO HEADER
 ========================================================== */
 
 .btn-header {
     justify-self: end;
 
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -227,6 +245,7 @@ ol {
     font-weight: 700;
 
     text-transform: uppercase;
+
     letter-spacing: 0.3px;
 
     transition: var(--transicao);
@@ -243,7 +262,7 @@ ol {
 
 
 /* ==========================================================
-   7. MENU MOBILE
+   8. MENU MOBILE
 ========================================================== */
 
 .menu-toggle {
@@ -254,6 +273,8 @@ ol {
 
     align-items: center;
     justify-content: center;
+
+    padding: 0;
 
     border-radius: 5px;
 
@@ -266,9 +287,8 @@ ol {
 
 
 /* ==========================================================
-   8. HERO
-   IMPORTANTE:
-   BANNER MANTIDO NO FORMATO ORIGINAL APROVADO
+   9. HERO / BANNER
+   NÃO ALTERAR
 ========================================================== */
 
 .hero {
@@ -297,6 +317,7 @@ ol {
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     background:
@@ -312,6 +333,7 @@ ol {
 
 .hero-container {
     position: relative;
+
     z-index: 2;
 
     padding-top: 105px;
@@ -329,6 +351,7 @@ ol {
     color: var(--branco);
 
     font-size: clamp(42px, 6vw, 76px);
+
     line-height: 1.03;
 
     font-weight: 700;
@@ -344,12 +367,15 @@ ol {
     color: rgba(255, 255, 255, 0.88);
 
     font-size: 18px;
+
     line-height: 1.75;
 }
 
 .hero-actions {
     display: flex;
+
     align-items: center;
+
     flex-wrap: wrap;
 
     gap: 14px;
@@ -357,11 +383,12 @@ ol {
 
 
 /* ==========================================================
-   9. BOTÕES GERAIS
+   10. BOTÕES
 ========================================================== */
 
 .btn {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -381,6 +408,7 @@ ol {
 
 .btn-primary {
     background: var(--laranja);
+
     color: var(--branco);
 }
 
@@ -397,22 +425,26 @@ ol {
     border: 1px solid rgba(255, 255, 255, 0.55);
 
     background: transparent;
+
     color: var(--branco);
 }
 
 .btn-outline:hover {
     border-color: var(--branco);
+
     background: var(--branco);
+
     color: var(--azul);
 }
 
 
 /* ==========================================================
-   10. SEÇÕES
+   11. SEÇÕES
 ========================================================== */
 
 .section {
     padding: 110px 0;
+
     background: var(--branco);
 }
 
@@ -422,7 +454,7 @@ ol {
 
 
 /* ==========================================================
-   11. TÍTULOS DAS SEÇÕES
+   12. TÍTULOS
 ========================================================== */
 
 .section-header {
@@ -433,8 +465,8 @@ ol {
     text-align: center;
 }
 
-.section-header .eyebrow,
-.eyebrow {
+.eyebrow,
+.section-header .eyebrow {
     display: inline-block;
 
     margin-bottom: 12px;
@@ -445,11 +477,14 @@ ol {
     font-weight: 700;
 
     text-transform: uppercase;
+
     letter-spacing: 1.5px;
 }
 
 .section-header h2,
 .section-title {
+    margin-bottom: 18px;
+
     color: var(--azul);
 
     font-size: clamp(32px, 4vw, 48px);
@@ -457,8 +492,6 @@ ol {
     line-height: 1.12;
 
     letter-spacing: -1px;
-
-    margin-bottom: 18px;
 }
 
 .section-header p,
@@ -466,12 +499,13 @@ ol {
     color: var(--texto-secundario);
 
     font-size: 17px;
+
     line-height: 1.75;
 }
 
 
 /* ==========================================================
-   12. SOBRE
+   13. SOBRE
 ========================================================== */
 
 #sobre {
@@ -484,6 +518,7 @@ ol {
     margin: 0 auto;
 
     display: grid;
+
     grid-template-columns: 1fr 1fr;
 
     gap: 70px;
@@ -492,6 +527,8 @@ ol {
 }
 
 .about-content h2 {
+    margin-bottom: 24px;
+
     color: var(--azul);
 
     font-size: clamp(32px, 4vw, 48px);
@@ -499,18 +536,16 @@ ol {
     line-height: 1.12;
 
     letter-spacing: -1px;
-
-    margin-bottom: 24px;
 }
 
 .about-content p {
+    margin-bottom: 18px;
+
     color: var(--texto-secundario);
 
     font-size: 16px;
 
     line-height: 1.8;
-
-    margin-bottom: 18px;
 }
 
 .about-content p:last-child {
@@ -519,7 +554,7 @@ ol {
 
 
 /* ==========================================================
-   13. NÚMEROS / INDICADORES
+   14. NÚMEROS
 ========================================================== */
 
 .numbers {
@@ -528,6 +563,7 @@ ol {
     background: var(--fundo-claro);
 
     border-top: 1px solid var(--borda);
+
     border-bottom: 1px solid var(--borda);
 }
 
@@ -537,6 +573,7 @@ ol {
     margin: 0 auto;
 
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
 }
 
@@ -574,7 +611,7 @@ ol {
 
 
 /* ==========================================================
-   14. SERVIÇOS
+   15. SERVIÇOS
 ========================================================== */
 
 .services-section {
@@ -589,6 +626,7 @@ ol {
     margin: 0 auto;
 
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
 
     gap: 26px;
@@ -683,7 +721,7 @@ ol {
 
 
 /* ==========================================================
-   15. GALERIA / MÍDIA V8
+   16. GALERIA
 ========================================================== */
 
 .v8-media-section {
@@ -698,6 +736,7 @@ ol {
     margin: 0 auto;
 
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
 
     gap: 18px;
@@ -726,7 +765,7 @@ ol {
 
 
 /* ==========================================================
-   16. VÍDEO
+   17. VÍDEO
 ========================================================== */
 
 .v8-video-section {
@@ -762,7 +801,7 @@ ol {
 
 
 /* ==========================================================
-   17. IMPACTO
+   18. IMPACTO
 ========================================================== */
 
 .impact {
@@ -779,6 +818,7 @@ ol {
     margin: 0 auto;
 
     display: grid;
+
     grid-template-columns: 1fr 1fr;
 
     gap: 80px;
@@ -794,6 +834,7 @@ ol {
 
 .impact-image img {
     width: 100%;
+
     height: 100%;
 
     min-height: 430px;
@@ -833,7 +874,7 @@ ol {
 
 
 /* ==========================================================
-   18. PROCESSO
+   19. PROCESSO
 ========================================================== */
 
 #processo {
@@ -848,6 +889,7 @@ ol {
     margin: 0 auto;
 
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
 }
 
@@ -865,11 +907,13 @@ ol {
 
 .process-item:last-child {
     padding-right: 0;
+
     border-right: 0;
 }
 
 .process-item span {
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -881,9 +925,11 @@ ol {
     border-radius: 50%;
 
     background: var(--laranja);
+
     color: var(--branco);
 
     font-size: 14px;
+
     font-weight: 700;
 }
 
@@ -905,7 +951,7 @@ ol {
 
 
 /* ==========================================================
-   19. CONTATO
+   20. CONTATO
 ========================================================== */
 
 .contact-section {
@@ -920,6 +966,7 @@ ol {
     margin: 0 auto;
 
     display: grid;
+
     grid-template-columns: 0.9fr 1.1fr;
 
     gap: 80px;
@@ -951,11 +998,12 @@ ol {
 
 
 /* ==========================================================
-   20. LISTA DE CONTATO
+   21. INFORMAÇÕES DE CONTATO
 ========================================================== */
 
 .contact-list {
     display: flex;
+
     flex-direction: column;
 
     gap: 20px;
@@ -973,6 +1021,7 @@ ol {
     flex: 0 0 auto;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1013,7 +1062,7 @@ ol {
 
 
 /* ==========================================================
-   21. FORMULÁRIO
+   22. FORMULÁRIO
 ========================================================== */
 
 .contact-form-wrapper {
@@ -1024,6 +1073,8 @@ ol {
     border: 1px solid var(--borda);
 
     border-radius: var(--raio);
+
+    box-shadow: 0 8px 25px rgba(4, 19, 55, 0.05);
 }
 
 .form-heading {
@@ -1046,6 +1097,7 @@ ol {
 
 .contact-form {
     display: flex;
+
     flex-direction: column;
 
     gap: 18px;
@@ -1053,6 +1105,7 @@ ol {
 
 .form-row {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
 
     gap: 18px;
@@ -1060,6 +1113,7 @@ ol {
 
 .form-group {
     display: flex;
+
     flex-direction: column;
 
     gap: 7px;
@@ -1069,6 +1123,7 @@ ol {
     color: var(--azul);
 
     font-size: 13px;
+
     font-weight: 700;
 }
 
@@ -1130,9 +1185,11 @@ ol {
     border-radius: var(--raio);
 
     background: var(--laranja);
+
     color: var(--branco);
 
     font-size: 14px;
+
     font-weight: 700;
 
     cursor: pointer;
@@ -1151,7 +1208,7 @@ ol {
 
 
 /* ==========================================================
-   22. MAPA
+   23. MAPA
 ========================================================== */
 
 .maps-section {
@@ -1176,7 +1233,7 @@ ol {
 
 
 /* ==========================================================
-   23. FOOTER
+   24. FOOTER
 ========================================================== */
 
 .footer {
@@ -1195,6 +1252,7 @@ ol {
     padding-bottom: 55px;
 
     display: grid;
+
     grid-template-columns: 1.5fr 1fr 1fr;
 
     gap: 60px;
@@ -1206,6 +1264,7 @@ ol {
 
 .footer-brand img {
     width: auto;
+
     max-width: 170px;
     max-height: 52px;
 
@@ -1228,11 +1287,13 @@ ol {
     font-size: 15px;
 
     text-transform: uppercase;
+
     letter-spacing: 0.5px;
 }
 
 .footer-links {
     display: flex;
+
     flex-direction: column;
 
     gap: 11px;
@@ -1252,6 +1313,7 @@ ol {
 
 .footer-contact {
     display: flex;
+
     flex-direction: column;
 
     gap: 12px;
@@ -1288,54 +1350,111 @@ ol {
 
 
 /* ==========================================================
-   24. WHATSAPP FLUTUANTE
+   25. WHATSAPP FLUTUANTE
+   CORRIGIDO — PEQUENO E PROPORCIONAL
 ========================================================== */
 
 .whatsapp-float {
     position: fixed;
 
-    z-index: 999;
+    z-index: 9999;
 
-    right: 24px;
-    bottom: 24px;
+    right: 20px;
+    bottom: 20px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    width: 58px;
-    height: 58px;
+    width: 52px;
+    height: 52px;
+
+    min-width: 52px;
+    min-height: 52px;
+
+    max-width: 52px;
+    max-height: 52px;
+
+    padding: 0;
+    margin: 0;
+
+    overflow: hidden;
+
+    border: 0;
 
     border-radius: 50%;
 
     background: #25D366;
 
-    color: var(--branco);
+    color: #FFFFFF;
 
     box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.22);
+        0 8px 22px rgba(0, 0, 0, 0.20);
+
+    line-height: 1;
+
+    cursor: pointer;
 
     transition:
-        transform var(--transicao),
-        box-shadow var(--transicao);
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
+
+
+/* ÍCONE DO WHATSAPP */
+
+.whatsapp-float img,
+.whatsapp-float svg {
+    display: block;
+
+    width: 25px !important;
+    height: 25px !important;
+
+    min-width: 25px;
+    min-height: 25px;
+
+    max-width: 25px !important;
+    max-height: 25px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    object-fit: contain;
+
+    flex: 0 0 25px;
+}
+
+
+/* CASO O ÍCONE SEJA FONT AWESOME */
+
+.whatsapp-float i {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 25px;
+
+    line-height: 1;
+}
+
+
+/* HOVER */
 
 .whatsapp-float:hover {
-    transform: translateY(-4px) scale(1.03);
+    transform: translateY(-3px) scale(1.03);
 
     box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.28);
-}
-
-.whatsapp-float svg,
-.whatsapp-float img {
-    width: 27px;
-    height: 27px;
+        0 12px 28px rgba(0, 0, 0, 0.25);
 }
 
 
 /* ==========================================================
-   25. ACESSIBILIDADE
+   26. ACESSIBILIDADE
 ========================================================== */
 
 :focus-visible {
@@ -1346,7 +1465,7 @@ ol {
 
 
 /* ==========================================================
-   26. TABLET
+   27. TABLET
 ========================================================== */
 
 @media (max-width: 1000px) {
@@ -1388,7 +1507,7 @@ ol {
 
 
 /* ==========================================================
-   27. MOBILE
+   28. MOBILE
 ========================================================== */
 
 @media (max-width: 700px) {
@@ -1417,6 +1536,8 @@ ol {
 
         display: flex;
 
+        align-items: center;
+
         justify-content: space-between;
 
         padding: 8px 14px;
@@ -1424,6 +1545,7 @@ ol {
 
     .logo img {
         max-width: 140px;
+
         max-height: 45px;
     }
 
@@ -1431,6 +1553,7 @@ ol {
         position: absolute;
 
         top: calc(100% + 8px);
+
         left: 0;
         right: 0;
 
@@ -1448,7 +1571,8 @@ ol {
 
         border-radius: 8px;
 
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        box-shadow:
+            0 15px 35px rgba(0, 0, 0, 0.25);
     }
 
     .nav.active {
@@ -1510,6 +1634,7 @@ ol {
         width: 100%;
 
         flex-direction: column;
+
         align-items: stretch;
     }
 
@@ -1733,20 +1858,44 @@ ol {
     }
 
 
-    /* WHATSAPP */
+    /* WHATSAPP MOBILE */
 
     .whatsapp-float {
-        right: 17px;
-        bottom: 17px;
+        right: 15px;
+        bottom: 15px;
 
-        width: 54px;
-        height: 54px;
+        width: 50px;
+        height: 50px;
+
+        min-width: 50px;
+        min-height: 50px;
+
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .whatsapp-float img,
+    .whatsapp-float svg {
+        width: 24px !important;
+        height: 24px !important;
+
+        min-width: 24px;
+        min-height: 24px;
+
+        max-width: 24px !important;
+        max-height: 24px !important;
+
+        flex-basis: 24px;
+    }
+
+    .whatsapp-float i {
+        font-size: 24px;
     }
 }
 
 
 /* ==========================================================
-   28. CELULARES PEQUENOS
+   29. CELULARES PEQUENOS
 ========================================================== */
 
 @media (max-width: 420px) {
@@ -1798,11 +1947,39 @@ ol {
     .contact-form-wrapper {
         padding: 22px 16px;
     }
+
+    .whatsapp-float {
+        right: 13px;
+        bottom: 13px;
+
+        width: 48px;
+        height: 48px;
+
+        min-width: 48px;
+        min-height: 48px;
+
+        max-width: 48px;
+        max-height: 48px;
+    }
+
+    .whatsapp-float img,
+    .whatsapp-float svg {
+        width: 23px !important;
+        height: 23px !important;
+
+        min-width: 23px;
+        min-height: 23px;
+
+        max-width: 23px !important;
+        max-height: 23px !important;
+
+        flex-basis: 23px;
+    }
 }
 
 
 /* ==========================================================
-   29. REDUÇÃO DE MOVIMENTO
+   30. REDUÇÃO DE MOVIMENTO
 ========================================================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -1815,7 +1992,9 @@ ol {
     *::before,
     *::after {
         transition-duration: 0.01ms !important;
+
         animation-duration: 0.01ms !important;
+
         animation-iteration-count: 1 !important;
     }
 }
