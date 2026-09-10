@@ -2265,3 +2265,244 @@ p {
         scroll-behavior: auto !important;
     }
 }
+/* =========================================================
+   HEADER — CS NEED
+   ========================================================= */
+
+.header-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 30px;
+}
+
+
+/* =========================================================
+   LOGO + NOME
+   ========================================================= */
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.brand img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+}
+
+.brand-name {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.brand-name strong {
+    color: #ff5a00;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   MENU CENTRALIZADO
+   ========================================================= */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.nav a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition:
+        color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.nav a:hover {
+    color: #ff5a00;
+}
+
+
+/* Linha inferior ao passar o mouse */
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: #ff5a00;
+    transition: width 0.25s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   BOTÃO DO HEADER
+   ========================================================= */
+
+.btn-header {
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   MENU HAMBURGER
+   ========================================================= */
+
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: all 0.25s ease;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .header-container {
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
+
+    .nav {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
+
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+
+        gap: 0;
+        padding: 15px 20px 20px;
+
+        background: #071B52;
+        border-top: 1px solid rgba(255,255,255,0.08);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.20);
+
+        z-index: 999;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        width: 100%;
+        min-height: 48px;
+        justify-content: center;
+        font-size: 15px;
+    }
+
+    .nav a::after {
+        display: none;
+    }
+
+    .btn-header {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .header-container {
+        min-height: 70px;
+        gap: 12px;
+    }
+
+    .brand {
+        gap: 8px;
+    }
+
+    .brand img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .brand-name {
+        font-size: 18px;
+    }
+
+    .nav {
+        padding: 12px 15px 18px;
+    }
+
+    .nav a {
+        min-height: 46px;
+    }
+
+}
+
+
+/* =========================================================
+   ANIMAÇÃO DO HAMBURGER
+   ========================================================= */
+
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
