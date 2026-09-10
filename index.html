@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -12,7 +11,7 @@
 
     <meta
         name="description"
-        content="CSNEED — Engenharia, estruturas metálicas, coberturas, pintura de piso, pavilhões e fachadas."
+        content="CSNEED Engenharia & Soluções — Estruturas metálicas, telhas e coberturas, pintura de piso, pavilhões e fachadas."
     >
 
     <meta
@@ -20,7 +19,12 @@
         content="#071B52"
     >
 
-    <title>CSNEED — Engenharia & Soluções</title>
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <title>CSNEED Engenharia & Soluções</title>
 
     <link
         rel="icon"
@@ -33,10 +37,12 @@
         href="css/style.css"
     >
 
-    <!-- V8 LOADER — NÃO ALTERAR -->
+    <!-- ======================================================
+         V8 LOADER — NÃO ALTERAR
+         ====================================================== -->
     <script
         src="js/v8-loader.js"
-        data-v8-project="0e5af95b-b6bc-4907-bfcf-95e865e04d5f"
+        data-project-id="0e5af95b-b6bc-4907-bfcf-95e865e04d5f"
         defer
     ></script>
 
@@ -44,25 +50,24 @@
 
 <body>
 
-    <!-- ==========================================================
+    <!-- ======================================================
          HEADER
-    =========================================================== -->
+         ====================================================== -->
 
     <header class="header">
 
-        <div class="container header-container">
+        <div class="header-container">
 
             <a
                 href="#inicio"
                 class="logo"
+                aria-label="CSNEED Engenharia & Soluções"
             >
                 <img
                     src="assets/logo.png"
-                    alt="CSNEED"
-                    data-v8-field="logo"
+                    alt="CSNEED Engenharia & Soluções"
                 >
             </a>
-
 
             <nav
                 class="nav"
@@ -92,30 +97,24 @@
 
             </nav>
 
-
             <a
-                href="#orcamento"
+                href="#contato"
                 class="btn btn-header"
             >
                 Solicitar orçamento
             </a>
 
-
-            <!-- MENU HAMBÚRGUER -->
-
             <button
-                type="button"
                 class="menu-toggle"
                 id="menuToggle"
+                type="button"
                 aria-label="Abrir menu"
                 aria-expanded="false"
                 aria-controls="mainNav"
             >
-
                 <span></span>
                 <span></span>
                 <span></span>
-
             </button>
 
         </div>
@@ -125,13 +124,13 @@
 
     <main>
 
-        <!-- ======================================================
+        <!-- ==================================================
              HERO
-        ======================================================= -->
+             ================================================== -->
 
         <section
-            id="inicio"
             class="hero"
+            id="inicio"
         >
 
             <div class="container hero-container">
@@ -143,19 +142,21 @@
                     </span>
 
                     <h1>
-                        Estruturas que sustentam grandes projetos.
+                        Soluções em
+                        <strong>engenharia</strong>
+                        para grandes projetos.
                     </h1>
 
                     <p>
-                        Soluções em engenharia, estruturas metálicas,
-                        coberturas, pintura de piso, pavilhões e fachadas,
-                        com foco em precisão, resistência e eficiência.
+                        Estruturas metálicas, coberturas, pintura de piso,
+                        pavilhões e fachadas com soluções eficientes,
+                        resistentes e profissionais.
                     </p>
 
                     <div class="hero-actions">
 
                         <a
-                            href="#orcamento"
+                            href="#contato"
                             class="btn btn-primary"
                         >
                             Solicitar orçamento
@@ -163,7 +164,7 @@
 
                         <a
                             href="#servicos"
-                            class="btn btn-secondary"
+                            class="btn btn-outline"
                         >
                             Conheça nossos serviços
                         </a>
@@ -177,13 +178,13 @@
         </section>
 
 
-        <!-- ======================================================
+        <!-- ==================================================
              SOBRE
-        ======================================================= -->
+             ================================================== -->
 
         <section
+            class="section section-light"
             id="sobre"
-            class="section section-about"
         >
 
             <div class="container">
@@ -195,24 +196,88 @@
                     </span>
 
                     <h2>
-                        Soluções pensadas para cada projeto.
+                        Experiência, precisão e compromisso.
                     </h2>
 
+                    <p>
+                        Soluções pensadas para entregar segurança,
+                        resistência e qualidade em cada etapa do projeto.
+                    </p>
+
                 </div>
 
-                <div class="about-content">
 
-                    <p>
-                        A CSNEED atua na área de engenharia e soluções
-                        para construção, oferecendo serviços pensados
-                        para diferentes necessidades de cada projeto.
-                    </p>
+                <div class="about-grid">
 
-                    <p>
-                        Unimos conhecimento técnico, planejamento e
-                        execução para entregar soluções eficientes,
-                        seguras e alinhadas aos objetivos de cada cliente.
-                    </p>
+                    <div class="about-content">
+
+                        <p>
+                            A CSNEED Engenharia & Soluções atua na execução
+                            de soluções para construção, estruturas e
+                            acabamentos, buscando sempre eficiência,
+                            qualidade e durabilidade.
+                        </p>
+
+                        <p>
+                            Nosso trabalho une planejamento, execução
+                            técnica e atenção aos detalhes para entregar
+                            resultados que atendam às necessidades de cada
+                            projeto.
+                        </p>
+
+                        <p>
+                            Do planejamento à execução, buscamos oferecer
+                            soluções práticas e confiáveis para empresas,
+                            indústrias e empreendimentos.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-highlight">
+
+                        <div class="highlight-item">
+
+                            <strong>
+                                Qualidade
+                            </strong>
+
+                            <span>
+                                Soluções desenvolvidas com foco em
+                                durabilidade e acabamento.
+                            </span>
+
+                        </div>
+
+
+                        <div class="highlight-item">
+
+                            <strong>
+                                Segurança
+                            </strong>
+
+                            <span>
+                                Compromisso com execução responsável
+                                e profissional.
+                            </span>
+
+                        </div>
+
+
+                        <div class="highlight-item">
+
+                            <strong>
+                                Eficiência
+                            </strong>
+
+                            <span>
+                                Planejamento para otimizar cada etapa
+                                do projeto.
+                            </span>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -221,78 +286,62 @@
         </section>
 
 
-        <!-- ======================================================
+        <!-- ==================================================
              NÚMEROS / DIFERENCIAIS
-        ======================================================= -->
+             ================================================== -->
 
-        <section class="section section-numbers">
+        <section class="numbers">
 
-            <div class="container">
+            <div class="container numbers-grid">
 
-                <div class="numbers-grid">
+                <div class="number-item">
 
-                    <div class="number-item">
+                    <strong>
+                        01
+                    </strong>
 
-                        <strong>01</strong>
+                    <span>
+                        Atendimento personalizado
+                    </span>
 
-                        <h3>
-                            Planejamento
-                        </h3>
-
-                        <p>
-                            Cada projeto começa com uma análise cuidadosa
-                            das necessidades.
-                        </p>
-
-                    </div>
+                </div>
 
 
-                    <div class="number-item">
+                <div class="number-item">
 
-                        <strong>02</strong>
+                    <strong>
+                        02
+                    </strong>
 
-                        <h3>
-                            Precisão técnica
-                        </h3>
+                    <span>
+                        Soluções sob medida
+                    </span>
 
-                        <p>
-                            Soluções desenvolvidas com atenção aos
-                            detalhes e às exigências do projeto.
-                        </p>
-
-                    </div>
+                </div>
 
 
-                    <div class="number-item">
+                <div class="number-item">
 
-                        <strong>03</strong>
+                    <strong>
+                        03
+                    </strong>
 
-                        <h3>
-                            Execução
-                        </h3>
+                    <span>
+                        Execução profissional
+                    </span>
 
-                        <p>
-                            Trabalho organizado para garantir qualidade
-                            e eficiência.
-                        </p>
-
-                    </div>
+                </div>
 
 
-                    <div class="number-item">
+                <div class="number-item">
 
-                        <strong>04</strong>
+                    <strong>
+                        04
+                    </strong>
 
-                        <h3>
-                            Compromisso
-                        </h3>
-
-                        <p>
-                            Foco em resultados, segurança e satisfação
-                            do cliente.
-                        </p>
-
-                    </div>
+                    <span>
+                        Foco em qualidade
+                    </span>
 
                 </div>
 
@@ -301,18 +350,18 @@
         </section>
 
 
-        <!-- ======================================================
+        <!-- ==================================================
              SERVIÇOS
-        ======================================================= -->
+             ================================================== -->
 
         <section
+            class="section services-section"
             id="servicos"
-            class="section section-services"
         >
 
             <div class="container">
 
-                <div class="section-heading">
+                <div class="section-heading section-heading-center">
 
                     <span class="eyebrow">
                         Nossos serviços
@@ -324,7 +373,7 @@
 
                     <p>
                         Serviços especializados para construção,
-                        reforma, acabamento e soluções estruturais.
+                        reforma, acabamento e estruturas.
                     </p>
 
                 </div>
@@ -360,16 +409,8 @@
                             <p>
                                 Projeto, fabricação e montagem de
                                 estruturas metálicas para diferentes
-                                aplicações.
+                                necessidades.
                             </p>
-
-                            <a
-                                href="#contato"
-                                class="service-link"
-                                aria-label="Solicitar orçamento de estruturas metálicas"
-                            >
-                                Solicitar orçamento →
-                            </a>
 
                         </div>
 
@@ -401,18 +442,10 @@
                             </h3>
 
                             <p>
-                                Instalação e manutenção de telhas e
-                                coberturas para diferentes tipos
-                                de estruturas.
+                                Instalação e manutenção de sistemas
+                                de cobertura com foco em proteção
+                                e durabilidade.
                             </p>
-
-                            <a
-                                href="#contato"
-                                class="service-link"
-                                aria-label="Solicitar orçamento de telhas e coberturas"
-                            >
-                                Solicitar orçamento →
-                            </a>
 
                         </div>
 
@@ -445,17 +478,9 @@
 
                             <p>
                                 Sistemas de alta resistência para
-                                proteção, acabamento e maior
-                                durabilidade dos pisos.
+                                proteção, acabamento e valorização
+                                dos ambientes.
                             </p>
-
-                            <a
-                                href="#contato"
-                                class="service-link"
-                                aria-label="Solicitar orçamento de pintura de piso"
-                            >
-                                Solicitar orçamento →
-                            </a>
 
                         </div>
 
@@ -488,17 +513,9 @@
 
                             <p>
                                 Construção e reforma de pavilhões
-                                de acordo com as necessidades
-                                de cada projeto.
+                                para diferentes aplicações e
+                                necessidades.
                             </p>
-
-                            <a
-                                href="#contato"
-                                class="service-link"
-                                aria-label="Solicitar orçamento de pavilhões"
-                            >
-                                Solicitar orçamento →
-                            </a>
 
                         </div>
 
@@ -530,18 +547,10 @@
                             </h3>
 
                             <p>
-                                Revestimento e acabamento de fachadas,
-                                com foco em proteção, estética
-                                e durabilidade.
+                                Revestimento e acabamento para
+                                transformar e valorizar a fachada
+                                de cada projeto.
                             </p>
-
-                            <a
-                                href="#contato"
-                                class="service-link"
-                                aria-label="Solicitar orçamento de fachadas"
-                            >
-                                Solicitar orçamento →
-                            </a>
 
                         </div>
 
@@ -555,23 +564,81 @@
         </section>
 
 
-        <!-- ======================================================
-             IMPACTO
-        ======================================================= -->
+        <!-- ==================================================
+             GALERIA V8
+             ================================================== -->
 
-        <section class="section section-impact">
+        <section class="section section-light v8-media-section">
 
-            <div class="container impact-container">
+            <div class="container">
 
-                <div class="impact-image">
+                <div class="section-heading section-heading-center">
 
-                    <img
-                        src="assets/impact.png"
-                        alt="Projetos CSNEED"
-                        loading="lazy"
-                    >
+                    <span class="eyebrow">
+                        Projetos
+                    </span>
+
+                    <h2>
+                        Conheça nossos trabalhos.
+                    </h2>
+
+                    <p>
+                        Confira imagens dos projetos e serviços
+                        realizados pela CSNEED.
+                    </p>
 
                 </div>
+
+                <div
+                    class="v8-gallery"
+                    data-v8-gallery
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             VÍDEO V8
+             ================================================== -->
+
+        <section class="section v8-video-section">
+
+            <div class="container">
+
+                <div class="section-heading section-heading-center">
+
+                    <span class="eyebrow">
+                        Vídeo
+                    </span>
+
+                    <h2>
+                        Veja a CSNEED em ação.
+                    </h2>
+
+                </div>
+
+                <video
+                    class="v8-video"
+                    data-v8-video
+                    controls
+                    preload="metadata"
+                    hidden
+                ></video>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             IMPACTO
+             ================================================== -->
+
+        <section class="impact">
+
+            <div class="container impact-container">
 
                 <div class="impact-content">
 
@@ -580,21 +647,27 @@
                     </span>
 
                     <h2>
-                        Qualidade e eficiência em cada etapa.
+                        Construir soluções que fazem a diferença.
                     </h2>
 
                     <p>
-                        Da definição da solução à execução,
-                        buscamos entregar um trabalho alinhado
-                        às necessidades e expectativas de cada cliente.
+                        Cada projeto é tratado com responsabilidade,
+                        planejamento e atenção aos detalhes para
+                        alcançar um resultado eficiente e duradouro.
                     </p>
 
-                    <a
-                        href="#orcamento"
-                        class="btn btn-primary"
-                    >
-                        Fale com a CSNEED
-                    </a>
+                </div>
+
+
+                <div class="impact-box">
+
+                    <span>
+                        CSNEED
+                    </span>
+
+                    <strong>
+                        Engenharia & Soluções
+                    </strong>
 
                 </div>
 
@@ -603,26 +676,31 @@
         </section>
 
 
-        <!-- ======================================================
+        <!-- ==================================================
              PROCESSO
-        ======================================================= -->
+             ================================================== -->
 
         <section
+            class="section section-light"
             id="processo"
-            class="section section-process"
         >
 
             <div class="container">
 
-                <div class="section-heading">
+                <div class="section-heading section-heading-center">
 
                     <span class="eyebrow">
-                        Nosso processo
+                        Como trabalhamos
                     </span>
 
                     <h2>
-                        Do planejamento à entrega.
+                        Um processo claro do início ao fim.
                     </h2>
+
+                    <p>
+                        Entendemos sua necessidade e buscamos a
+                        melhor solução para o seu projeto.
+                    </p>
 
                 </div>
 
@@ -632,15 +710,17 @@
 
                     <div class="process-item">
 
-                        <span>01</span>
+                        <span class="process-number">
+                            01
+                        </span>
 
                         <h3>
-                            Entender
+                            Entendimento
                         </h3>
 
                         <p>
-                            Identificamos as necessidades
-                            e características do projeto.
+                            Analisamos as necessidades e características
+                            do projeto.
                         </p>
 
                     </div>
@@ -648,15 +728,17 @@
 
                     <div class="process-item">
 
-                        <span>02</span>
+                        <span class="process-number">
+                            02
+                        </span>
 
                         <h3>
-                            Planejar
+                            Planejamento
                         </h3>
 
                         <p>
-                            Definimos as melhores soluções
-                            para cada situação.
+                            Definimos a melhor solução para cada
+                            situação.
                         </p>
 
                     </div>
@@ -664,15 +746,17 @@
 
                     <div class="process-item">
 
-                        <span>03</span>
+                        <span class="process-number">
+                            03
+                        </span>
 
                         <h3>
-                            Executar
+                            Execução
                         </h3>
 
                         <p>
-                            Colocamos o planejamento em prática
-                            com organização e precisão.
+                            Colocamos o projeto em prática com
+                            atenção e profissionalismo.
                         </p>
 
                     </div>
@@ -680,15 +764,17 @@
 
                     <div class="process-item">
 
-                        <span>04</span>
+                        <span class="process-number">
+                            04
+                        </span>
 
                         <h3>
-                            Entregar
+                            Entrega
                         </h3>
 
                         <p>
-                            Buscamos entregar qualidade,
-                            segurança e eficiência.
+                            Buscamos entregar um resultado de qualidade,
+                            resistente e funcional.
                         </p>
 
                     </div>
@@ -701,230 +787,438 @@
         </section>
 
 
-        <!-- ======================================================
+        <!-- ==================================================
              CONTATO
-        ======================================================= -->
+             ================================================== -->
 
         <section
+            class="section contact-section"
             id="contato"
-            class="section section-contact"
         >
 
-            <div class="container contact-container">
+            <div class="container">
 
-                <div class="contact-content">
-
-                    <span class="eyebrow">
-                        Entre em contato
-                    </span>
-
-                    <h2>
-                        Vamos conversar sobre seu projeto?
-                    </h2>
-
-                    <p>
-                        Entre em contato com a CSNEED e solicite
-                        uma avaliação para sua necessidade.
-                    </p>
+                <div class="contact-grid">
 
 
-                    <div class="contact-links">
+                    <div class="contact-content">
+
+                        <span class="eyebrow">
+                            Entre em contato
+                        </span>
+
+                        <h2>
+                            Vamos conversar sobre seu projeto?
+                        </h2>
+
+                        <p>
+                            Entre em contato com a CSNEED e solicite
+                            informações ou um orçamento para sua
+                            necessidade.
+                        </p>
 
 
-                        <a
-                            href="https://wa.me/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-v8-field="whatsapp-link"
+                        <div class="contact-list">
+
+
+                            <!-- WHATSAPP -->
+
+                            <a
+                                href="#"
+                                class="contact-item"
+                                data-v8="contact.whatsapp"
+                                aria-label="WhatsApp"
+                            >
+
+                                <span class="contact-icon">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.55 0 .24 5.31.24 11.84c0 2.09.55 4.13 1.6 5.93L.13 24l6.37-1.67a11.8 11.8 0 0 0 5.58 1.42h.01c6.52 0 11.83-5.31 11.83-11.84 0-3.16-1.23-6.13-3.4-8.43ZM12.09 21.73h-.01a9.83 9.83 0 0 1-5.01-1.37l-.36-.21-3.78.99 1.01-3.68-.23-.38a9.85 9.85 0 0 1-1.51-5.24C2.2 6.39 6.63 1.96 12.08 1.96c2.64 0 5.12 1.03 6.98 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.46-4.42 9.88-9.86 9.88Zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"
+                                        />
+                                    </svg>
+                                </span>
+
+                                <span>
+                                    <small>
+                                        WhatsApp
+                                    </small>
+
+                                    <strong>
+                                        Fale conosco
+                                    </strong>
+                                </span>
+
+                            </a>
+
+
+                            <!-- E-MAIL -->
+
+                            <a
+                                href="#"
+                                class="contact-item"
+                                data-v8="contact.email"
+                                aria-label="E-mail"
+                            >
+
+                                <span class="contact-icon">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.24-8 5-8-5V6l8 5 8-5v2.24ZM4 18V10.59l7.47 4.67a1 1 0 0 0 1.06 0L20 10.59V18H4Z"
+                                        />
+                                    </svg>
+                                </span>
+
+                                <span>
+                                    <small>
+                                        E-mail
+                                    </small>
+
+                                    <strong>
+                                        Envie uma mensagem
+                                    </strong>
+                                </span>
+
+                            </a>
+
+
+                            <!-- TELEFONE -->
+
+                            <a
+                                href="#"
+                                class="contact-item"
+                                data-v8="contact.phone"
+                                aria-label="Telefone"
+                            >
+
+                                <span class="contact-icon">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.56 3.57.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.16 21 3 13.84 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.19 2.45.56 3.57a1 1 0 0 1-.24 1.02l-2.2 2.2Z"
+                                        />
+                                    </svg>
+                                </span>
+
+                                <span>
+                                    <small>
+                                        Telefone
+                                    </small>
+
+                                    <strong>
+                                        Ligue para nós
+                                    </strong>
+                                </span>
+
+                            </a>
+
+
+                            <!-- INSTAGRAM -->
+
+                            <a
+                                href="#"
+                                class="contact-item"
+                                data-v8="social.instagram"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Instagram"
+                            >
+
+                                <span class="contact-icon">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5ZM17.75 6a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 17.75 6Z"
+                                        />
+                                    </svg>
+                                </span>
+
+                                <span>
+                                    <small>
+                                        Instagram
+                                    </small>
+
+                                    <strong>
+                                        Acompanhe nosso trabalho
+                                    </strong>
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FORMULÁRIO -->
+
+                    <div class="contact-form-wrapper">
+
+                        <form
+                            class="contact-form"
+                            data-v8-form="contact"
+                            method="POST"
                         >
 
-                            <strong>
-                                WhatsApp
-                            </strong>
+                            <div class="form-heading">
 
-                            <span data-v8-field="whatsapp-text">
-                                Fale conosco pelo WhatsApp
-                            </span>
+                                <span class="eyebrow">
+                                    Solicite um orçamento
+                                </span>
 
-                        </a>
+                                <h3>
+                                    Conte-nos sobre seu projeto.
+                                </h3>
 
+                                <p>
+                                    Preencha o formulário e entraremos
+                                    em contato.
+                                </p>
 
-                        <a
-                            href="mailto:"
-                            data-v8-field="email"
-                        >
-
-                            <strong>
-                                E-mail
-                            </strong>
-
-                            <span>
-                                Entre em contato por e-mail
-                            </span>
-
-                        </a>
+                            </div>
 
 
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-v8-field="instagram"
-                        >
+                            <div class="form-group">
 
-                            <strong>
-                                Instagram
-                            </strong>
+                                <label for="nome">
+                                    Nome
+                                </label>
 
-                            <span>
-                                @csneed
-                            </span>
+                                <input
+                                    type="text"
+                                    id="nome"
+                                    name="nome"
+                                    placeholder="Seu nome"
+                                    autocomplete="name"
+                                    required
+                                >
 
-                        </a>
+                            </div>
 
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="email">
+                                        E-mail
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="seu@email.com"
+                                        autocomplete="email"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="telefone">
+                                        Telefone
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="telefone"
+                                        name="telefone"
+                                        placeholder="(00) 00000-0000"
+                                        autocomplete="tel"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="mensagem">
+                                    Mensagem
+                                </label>
+
+                                <textarea
+                                    id="mensagem"
+                                    name="mensagem"
+                                    rows="5"
+                                    placeholder="Conte brevemente sobre o seu projeto..."
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary btn-submit"
+                            >
+                                Solicitar orçamento
+                            </button>
+
+                        </form>
 
                     </div>
 
                 </div>
 
-
-                <div
-                    id="orcamento"
-                    class="contact-form-wrapper"
-                >
-
-                    <form
-                        class="contact-form"
-                        data-v8-form="contact"
-                    >
-
-                        <div class="form-group">
-
-                            <label for="nome">
-                                Nome
-                            </label>
-
-                            <input
-                                type="text"
-                                id="nome"
-                                name="nome"
-                                placeholder="Seu nome"
-                                required
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="email">
-                                E-mail
-                            </label>
-
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="seuemail@email.com"
-                                required
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="telefone">
-                                Telefone / WhatsApp
-                            </label>
-
-                            <input
-                                type="tel"
-                                id="telefone"
-                                name="telefone"
-                                placeholder="(00) 00000-0000"
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="mensagem">
-                                Como podemos ajudar?
-                            </label>
-
-                            <textarea
-                                id="mensagem"
-                                name="mensagem"
-                                rows="5"
-                                placeholder="Conte um pouco sobre seu projeto..."
-                                required
-                            ></textarea>
-
-                        </div>
-
-
-                        <button
-                            type="submit"
-                            class="btn btn-primary btn-full"
-                        >
-                            Solicitar orçamento
-                        </button>
-
-                    </form>
-
-                </div>
-
             </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             GOOGLE MAPS V8
+             ================================================== -->
+
+        <section
+            class="maps-section"
+            aria-label="Localização"
+        >
+
+            <div
+                class="v8-maps"
+                data-v8-maps-embed
+            ></div>
 
         </section>
 
     </main>
 
 
-    <!-- ==========================================================
+    <!-- ======================================================
          FOOTER
-    =========================================================== -->
+         ====================================================== -->
 
     <footer class="footer">
 
-        <div class="container footer-container">
+        <div class="container footer-grid">
+
 
             <div class="footer-brand">
 
-                <img
-                    src="assets/logo/logo.png"
-                    alt="CSNEED"
+                <a
+                    href="#inicio"
+                    aria-label="CSNEED Engenharia & Soluções"
                 >
 
-                <p data-v8-field="footer-text">
-                    Soluções em engenharia e construção.
+                    <img
+                        src="assets/logo/logo.png"
+                        alt="CSNEED Engenharia & Soluções"
+                    >
+
+                </a>
+
+                <p>
+                    Engenharia & Soluções para projetos,
+                    estruturas e acabamentos.
                 </p>
 
             </div>
 
 
-            <div class="footer-company">
+            <div class="footer-links">
 
-                <strong data-v8-field="company-name">
-                    CSNEED
-                </strong>
+                <h3>
+                    Navegação
+                </h3>
 
-                <span>
-                    Engenharia & Soluções
-                </span>
+                <a href="#inicio">
+                    Início
+                </a>
+
+                <a href="#sobre">
+                    Sobre
+                </a>
+
+                <a href="#servicos">
+                    Serviços
+                </a>
+
+                <a href="#processo">
+                    Processo
+                </a>
+
+                <a href="#contato">
+                    Contato
+                </a>
 
             </div>
 
 
-            <div class="footer-social">
+            <div class="footer-links">
+
+                <h3>
+                    Serviços
+                </h3>
+
+                <a href="#servicos">
+                    Estruturas Metálicas
+                </a>
+
+                <a href="#servicos">
+                    Telhas e Coberturas
+                </a>
+
+                <a href="#servicos">
+                    Pintura de Piso
+                </a>
+
+                <a href="#servicos">
+                    Pavilhões
+                </a>
+
+                <a href="#servicos">
+                    Fachadas
+                </a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>
+                    Contato
+                </h3>
 
                 <a
                     href="#"
+                    data-v8="contact.whatsapp"
+                >
+                    WhatsApp
+                </a>
+
+                <a
+                    href="#"
+                    data-v8="contact.email"
+                >
+                    E-mail
+                </a>
+
+                <a
+                    href="#"
+                    data-v8="contact.phone"
+                >
+                    Telefone
+                </a>
+
+                <a
+                    href="#"
+                    data-v8="social.instagram"
                     target="_blank"
                     rel="noopener noreferrer"
-                    data-v8-field="instagram"
                 >
                     Instagram
                 </a>
@@ -940,7 +1234,8 @@
 
                 <p>
                     © <span id="currentYear"></span>
-                    CSNEED. Todos os direitos reservados.
+                    CSNEED Engenharia & Soluções.
+                    Todos os direitos reservados.
                 </p>
 
             </div>
@@ -950,85 +1245,45 @@
     </footer>
 
 
-    <!-- ==========================================================
-         SCRIPT
-    =========================================================== -->
+    <!-- ======================================================
+         JAVASCRIPT DO MENU
+         ====================================================== -->
 
     <script>
-
         document.addEventListener("DOMContentLoaded", function () {
 
-            /* ANO AUTOMÁTICO */
-
-            const yearElement =
-                document.getElementById("currentYear");
-
-            if (yearElement) {
-
-                yearElement.textContent =
-                    new Date().getFullYear();
-
-            }
-
-
-            /* MENU MOBILE */
-
-            const menuToggle =
-                document.getElementById("menuToggle");
-
-            const mainNav =
-                document.getElementById("mainNav");
-
+            const menuToggle = document.getElementById("menuToggle");
+            const mainNav = document.getElementById("mainNav");
 
             if (menuToggle && mainNav) {
 
-                menuToggle.addEventListener(
-                    "click",
-                    function () {
+                menuToggle.addEventListener("click", function () {
 
-                        const isOpen =
-                            mainNav.classList.toggle("active");
+                    const isOpen =
+                        mainNav.classList.toggle("active");
 
-                        menuToggle.classList.toggle(
-                            "active",
-                            isOpen
-                        );
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        isOpen ? "true" : "false"
+                    );
 
-                        menuToggle.setAttribute(
-                            "aria-expanded",
-                            String(isOpen)
-                        );
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        isOpen
+                            ? "Fechar menu"
+                            : "Abrir menu"
+                    );
 
-                        menuToggle.setAttribute(
-                            "aria-label",
-                            isOpen
-                                ? "Fechar menu"
-                                : "Abrir menu"
-                        );
-
-                    }
-                );
+                });
 
 
-                /* FECHAR MENU AO CLICAR EM UM LINK */
+                mainNav
+                    .querySelectorAll("a")
+                    .forEach(function (link) {
 
-                const navLinks =
-                    mainNav.querySelectorAll("a");
+                        link.addEventListener("click", function () {
 
-
-                navLinks.forEach(function (link) {
-
-                    link.addEventListener(
-                        "click",
-                        function () {
-
-                            mainNav.classList.remove(
-                                "active"
-                            );
-
-                            menuToggle.classList.remove(
-                                "active"
-                            );
+                            mainNav.classList.remove("active");
 
                             menuToggle.setAttribute(
                                 "aria-expanded",
@@ -1040,15 +1295,22 @@
                                 "Abrir menu"
                             );
 
-                        }
-                    );
+                        });
 
-                });
+                    });
 
             }
 
-        });
 
+            const currentYear =
+                document.getElementById("currentYear");
+
+            if (currentYear) {
+                currentYear.textContent =
+                    new Date().getFullYear();
+            }
+
+        });
     </script>
 
 </body>
