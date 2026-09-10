@@ -1,8 +1,9 @@
+```css
 /* ==========================================================
    CSNEED — ENGENHARIA & SOLUÇÕES
    STYLE.CSS
    PALETA OFICIAL DA EMPRESA
-   VERSÃO COMPLETA
+   VERSÃO FINAL COMPLETA
    ========================================================== */
 
 
@@ -56,13 +57,17 @@ html {
 
 body {
     margin: 0;
+
     font-family:
         Arial,
         Helvetica,
         sans-serif;
+
     background: var(--branco);
     color: var(--texto);
+
     line-height: 1.6;
+
     overflow-x: hidden;
 }
 
@@ -88,10 +93,12 @@ textarea {
    ========================================================== */
 
 .container {
-    width: min(
-        calc(100% - 40px),
-        var(--container)
-    );
+    width:
+        min(
+            calc(100% - 40px),
+            var(--container)
+        );
+
     margin: 0 auto;
 }
 
@@ -105,26 +112,33 @@ h2,
 h3,
 h4 {
     margin: 0;
+
     font-weight: 700;
+
     line-height: 1.15;
+
     color: var(--azul);
 }
 
 h1 {
-    font-size: clamp(
-        42px,
-        6vw,
-        76px
-    );
+    font-size:
+        clamp(
+            42px,
+            6vw,
+            76px
+        );
+
     letter-spacing: -2px;
 }
 
 h2 {
-    font-size: clamp(
-        34px,
-        4vw,
-        54px
-    );
+    font-size:
+        clamp(
+            34px,
+            4vw,
+            54px
+        );
+
     letter-spacing: -1px;
 }
 
@@ -144,11 +158,17 @@ p {
 
 .eyebrow {
     display: inline-block;
+
     margin-bottom: 18px;
+
     color: var(--laranja);
+
     font-size: 12px;
+
     font-weight: 700;
+
     letter-spacing: 2.5px;
+
     text-transform: uppercase;
 }
 
@@ -159,17 +179,22 @@ p {
 
 .btn {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
     min-height: 52px;
+
     padding: 0 28px;
 
     border: 1px solid transparent;
+
     border-radius: var(--raio);
 
     font-size: 14px;
+
     font-weight: 700;
+
     letter-spacing: 0.2px;
 
     cursor: pointer;
@@ -193,10 +218,12 @@ p {
 
 .btn-primary {
     background: var(--laranja);
+
     color: var(--branco);
 
     box-shadow:
-        0 8px 22px rgba(
+        0 8px 22px
+        rgba(
             255,
             90,
             31,
@@ -206,10 +233,12 @@ p {
 
 .btn-primary:hover {
     background: var(--laranja-escuro);
+
     color: var(--branco);
 
     box-shadow:
-        0 12px 28px rgba(
+        0 12px 28px
+        rgba(
             223,
             66,
             16,
@@ -224,6 +253,7 @@ p {
 
 .btn-secondary {
     background: transparent;
+
     color: var(--branco);
 
     border-color:
@@ -237,7 +267,9 @@ p {
 
 .btn-secondary:hover {
     background: var(--branco);
+
     color: var(--azul);
+
     border-color: var(--branco);
 }
 
@@ -248,15 +280,17 @@ p {
 
 .header {
     position: fixed;
+
     top: 18px;
     left: 50%;
 
     z-index: 1000;
 
-    width: min(
-        calc(100% - 40px),
-        1240px
-    );
+    width:
+        min(
+            calc(100% - 40px),
+            1240px
+        );
 
     transform: translateX(-50%);
 
@@ -289,6 +323,7 @@ p {
         );
 
     backdrop-filter: blur(14px);
+
     -webkit-backdrop-filter: blur(14px);
 }
 
@@ -303,12 +338,6 @@ p {
 
     display: grid;
 
-    /*
-       COLUNA 1 = LOGO
-       COLUNA 2 = MENU
-       COLUNA 3 = BOTÃO
-    */
-
     grid-template-columns:
         1fr
         auto
@@ -318,8 +347,7 @@ p {
 
     gap: 25px;
 
-    padding:
-        0 24px;
+    padding: 0 24px;
 }
 
 
@@ -328,7 +356,6 @@ p {
    ========================================================== */
 
 .logo {
-
     display: flex;
 
     align-items: center;
@@ -339,17 +366,12 @@ p {
 }
 
 .logo img {
-
     display: block;
 
     width: auto;
 
-    /*
-       LOGO MAIOR
-       Mantém proporção original
-    */
-
     max-width: 190px;
+
     max-height: 58px;
 
     object-fit: contain;
@@ -370,11 +392,6 @@ p {
 
     gap: 30px;
 
-    /*
-       IMPORTANTE:
-       MENU SEMPRE CENTRALIZADO
-    */
-
     justify-self: center;
 }
 
@@ -391,6 +408,7 @@ p {
         );
 
     font-size: 13px;
+
     font-weight: 600;
 
     white-space: nowrap;
@@ -399,11 +417,6 @@ p {
         color var(--transicao);
 }
 
-
-/* ==========================================================
-   LINHA ABAIXO DO MENU
-   ========================================================== */
-
 .nav a::after {
 
     content: "";
@@ -411,9 +424,11 @@ p {
     position: absolute;
 
     left: 0;
+
     bottom: -8px;
 
     width: 0;
+
     height: 2px;
 
     background: var(--laranja);
@@ -445,8 +460,7 @@ p {
 
     min-height: 44px;
 
-    padding:
-        0 20px;
+    padding: 0 20px;
 
     background: var(--laranja);
 
@@ -455,6 +469,7 @@ p {
     border-radius: 5px;
 
     font-size: 13px;
+
     font-weight: 700;
 
     white-space: nowrap;
@@ -496,11 +511,13 @@ p {
     display: none;
 
     width: 44px;
+
     height: 44px;
 
     padding: 0;
 
     align-items: center;
+
     justify-content: center;
 
     flex-direction: column;
@@ -528,6 +545,7 @@ p {
     display: block;
 
     width: 21px;
+
     height: 2px;
 
     background: var(--branco);
@@ -629,10 +647,11 @@ p {
 
 .hero-content {
 
-    width: min(
-        720px,
-        100%
-    );
+    width:
+        min(
+            720px,
+            100%
+        );
 }
 
 .hero h1 {
@@ -925,6 +944,7 @@ p {
 .service-image img {
 
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -1131,6 +1151,7 @@ p {
     justify-content: center;
 
     width: 48px;
+
     height: 48px;
 
     margin-bottom: 24px;
@@ -1383,7 +1404,9 @@ p {
     display: grid;
 
     grid-template-columns:
-        1.5fr 1fr 1fr;
+        1.5fr
+        1fr
+        1fr;
 
     gap: 50px;
 
@@ -1547,6 +1570,7 @@ p {
     .logo img {
 
         max-width: 165px;
+
         max-height: 52px;
     }
 
@@ -1700,14 +1724,14 @@ p {
     }
 
 
-    /* ESCONDE BOTÃO DESKTOP */
+    /* BOTÃO DESKTOP */
 
     .btn-header {
         display: none;
     }
 
 
-    /* MOSTRA HAMBÚRGUER */
+    /* HAMBÚRGUER */
 
     .menu-toggle {
 
@@ -1718,7 +1742,7 @@ p {
 
 
     /* ======================================================
-       MENU MOBILE ABERTO
+       MENU MOBILE
        ====================================================== */
 
     .nav {
@@ -2183,3 +2207,4 @@ p {
             1 !important;
     }
 }
+```
