@@ -143,99 +143,85 @@ p {
 }
 
 
-/* ==========================================================
-   HEADER
-========================================================== */
-
-.header {
-    position: fixed;
-
-    top: 18px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    width: min(
-        calc(100% - 36px),
-        var(--header-width)
-    );
-
-    z-index: 1000;
-
-    background:
-        rgba(4, 19, 55, .94);
-
-    border:
-        1px solid rgba(255,255,255,.10);
-
-    border-radius: 12px;
-
-    box-shadow:
-        0 15px 45px rgba(0,0,0,.20);
-
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-}
+/* =========================================================
+   HEADER — LOGO ESQUERDA / MENU CENTRO / BOTÃO DIREITA
+   ========================================================= */
 
 .header-container {
     position: relative;
-    min-height: 82px;
-
     display: flex;
     align-items: center;
-
-    gap: 28px;
-
-    padding:
-        9px 18px;
+    justify-content: space-between;
 }
+
+
+/* =========================================================
+   LOGO — ESQUERDA
+   ========================================================= */
 
 .brand {
     display: flex;
     align-items: center;
-
     flex-shrink: 0;
+    text-decoration: none;
 }
 
 .brand img {
-    width: auto;
-    max-width: 220px;
-    max-height: 64px;
-
+    width: 82px;
+    height: 62px;
     object-fit: contain;
+    display: block;
 }
 
-.nav {
+
+/* =========================================================
+   MENU — CENTRO ABSOLUTO DA TELA
+   ========================================================= */
+
+.header .nav {
     position: absolute;
     left: 50%;
     top: 50%;
+
     transform: translate(-50%, -50%);
 
     display: flex;
     align-items: center;
-
     justify-content: center;
 
-    gap: 28px;
-
-    margin-left: 0;
+    gap: 32px;
 
     white-space: nowrap;
 }
 
-.nav a {
+
+/* Links */
+
+.header .nav a {
     position: relative;
 
-    color: rgba(255,255,255,.82);
+    display: inline-flex;
+    align-items: center;
 
-    font-size: .86rem;
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 14px;
     font-weight: 600;
 
-    transition:
-        color var(--transicao);
+    white-space: nowrap;
+
+    transition: color .25s ease;
 }
 
-.nav a::after {
+.header .nav a:hover {
+    color: #ff5a00;
+}
+
+
+/* Linha abaixo do link */
+
+.header .nav a::after {
     content: "";
 
     position: absolute;
@@ -246,21 +232,191 @@ p {
     width: 0;
     height: 2px;
 
-    background: var(--laranja);
+    background: #ff5a00;
 
-    transition:
-        width var(--transicao);
+    transition: width .25s ease;
 }
 
-.nav a:hover {
-    color: var(--branco);
-}
-
-.nav a:hover::after {
+.header .nav a:hover::after {
     width: 100%;
 }
 
 
+/* =========================================================
+   BOTÃO — DIREITA
+   ========================================================= */
+
+.btn-header {
+    display: inline-flex;
+
+    margin-left: auto;
+
+    white-space: nowrap;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   HAMBURGER
+   ========================================================= */
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .header-container {
+        min-height: 72px;
+    }
+
+    .brand img {
+        width: 78px;
+        height: 58px;
+    }
+
+    .btn-header {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+
+        width: 44px;
+        height: 44px;
+
+        padding: 8px;
+
+        border: 0;
+        background: transparent;
+
+        cursor: pointer;
+
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column;
+        gap: 5px;
+
+        position: relative;
+        z-index: 1001;
+    }
+
+    .menu-toggle span {
+        display: block;
+
+        width: 25px;
+        height: 2px;
+
+        background: #ffffff;
+
+        border-radius: 2px;
+
+        transition: all .25s ease;
+    }
+
+
+    /* MENU MOBILE */
+
+    .header .nav {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        transform: none;
+
+        display: none;
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 0;
+
+        padding: 15px 20px 20px;
+
+        background: #071B52;
+
+        border-top:
+            1px solid rgba(255,255,255,.08);
+
+        box-shadow:
+            0 15px 30px rgba(0,0,0,.20);
+
+        z-index: 1000;
+    }
+
+    .header .nav.active {
+        display: flex;
+    }
+
+    .header .nav a {
+        width: 100%;
+
+        min-height: 48px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 15px;
+    }
+
+    .header .nav a::after {
+        display: none;
+    }
+
+
+    /* HAMBURGER ABERTO */
+
+    .menu-toggle[aria-expanded="true"]
+    span:nth-child(1) {
+        transform:
+            translateY(7px)
+            rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"]
+    span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle[aria-expanded="true"]
+    span:nth-child(3) {
+        transform:
+            translateY(-7px)
+            rotate(-45deg);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .header-container {
+        min-height: 70px;
+        gap: 12px;
+    }
+
+    .brand img {
+        width: 72px;
+        height: 54px;
+    }
+
+}
 /* ==========================================================
    BOTÕES
 ========================================================== */
