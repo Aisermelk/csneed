@@ -1,7 +1,7 @@
 /* ==========================================================
    CSNEED — ENGENHARIA & SOLUÇÕES
    STYLE.CSS
-   COMPATÍVEL COM O INDEX.HTML ATUAL
+   VERSÃO FINAL — COMPATÍVEL COM O INDEX.HTML ATUAL
    ========================================================== */
 
 
@@ -163,7 +163,6 @@ ol {
     display: flex;
 
     align-items: center;
-
     justify-content: flex-start;
 
     min-width: 0;
@@ -488,7 +487,6 @@ ol {
     color: var(--laranja);
 
     font-size: 13px;
-
     font-weight: 700;
 
     text-transform: uppercase;
@@ -514,7 +512,6 @@ ol {
 
 /* ==========================================================
    13. CABEÇALHO DAS SEÇÕES
-   CORRIGIDO PARA .section-heading DO HTML
 ========================================================== */
 
 .section-heading {
@@ -957,6 +954,7 @@ ol {
     flex-direction: column;
 
     align-items: center;
+
     justify-content: center;
 
     padding: 40px;
@@ -1038,6 +1036,7 @@ ol {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     width: 44px;
@@ -1154,6 +1153,7 @@ ol {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     width: 44px;
@@ -1486,6 +1486,7 @@ ol {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     width: 52px;
