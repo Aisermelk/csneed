@@ -3029,14 +3029,8 @@ a[data-v8] {
 
 
 /* ==========================================================
-   51. CORREÇÃO DE ELEMENTOS FLUTUANTES V8
+   51. BOTÃO FLUTUANTE WHATSAPP
 ========================================================== */
-
-/*
-   Caso o V8 Loader injete um botão flutuante,
-   ele deve permanecer preso ao canto inferior
-   direito da tela.
-*/
 
 .v8-floating,
 .v8-floating-button,
@@ -3046,24 +3040,81 @@ a[data-v8] {
 
     position: fixed !important;
 
-    right:
-        20px !important;
+    right: 20px !important;
 
-    bottom:
-        20px !important;
+    bottom: 20px !important;
 
-    left:
-        auto !important;
+    left: auto !important;
 
-    top:
-        auto !important;
+    top: auto !important;
 
-    z-index:
-        9999 !important;
+    z-index: 99999 !important;
 
-    max-width:
-        calc(100vw - 40px);
+    max-width: none !important;
 
+    width: auto !important;
+
+    height: auto !important;
+
+    margin: 0 !important;
+
+    transform: none !important;
+}
+
+
+/* ==========================================================
+   AJUSTE DOS ELEMENTOS INTERNOS DO WHATSAPP
+========================================================== */
+
+.v8-floating img,
+.v8-floating-button img,
+.v8-whatsapp img,
+.whatsapp-floating img,
+.whatsapp-button img {
+
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+/* ==========================================================
+   WHATSAPP NO CELULAR
+========================================================== */
+
+@media (max-width: 700px) {
+
+    .v8-floating,
+    .v8-floating-button,
+    .v8-whatsapp,
+    .whatsapp-floating,
+    .whatsapp-button {
+
+        right: 15px !important;
+
+        bottom: 15px !important;
+
+        max-width: none !important;
+    }
+}
+
+
+/* ==========================================================
+   WHATSAPP EM TELAS PEQUENAS
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .v8-floating,
+    .v8-floating-button,
+    .v8-whatsapp,
+    .whatsapp-floating,
+    .whatsapp-button {
+
+        right: 12px !important;
+
+        bottom: 12px !important;
+    }
 }
 
 
