@@ -1,7 +1,8 @@
 /* ==========================================================
    CSNEED — ENGENHARIA & SOLUÇÕES
    STYLE.CSS
-   PALETA OFICIAL DA EMPRESA
+   VERSÃO COMPLETA
+   COMPATÍVEL COM V8 ADMIN / V8 LOADER
 ========================================================== */
 
 
@@ -108,10 +109,11 @@ textarea {
 
 .container {
 
-    width: min(
-        calc(100% - 40px),
-        var(--container)
-    );
+    width:
+        min(
+            calc(100% - 40px),
+            var(--container)
+        );
 
     margin: 0 auto;
 
@@ -140,11 +142,12 @@ h4 {
 
 h1 {
 
-    font-size: clamp(
-        42px,
-        6vw,
-        76px
-    );
+    font-size:
+        clamp(
+            42px,
+            6vw,
+            76px
+        );
 
     letter-spacing: -2px;
 
@@ -153,11 +156,12 @@ h1 {
 
 h2 {
 
-    font-size: clamp(
-        34px,
-        4vw,
-        54px
-    );
+    font-size:
+        clamp(
+            34px,
+            4vw,
+            54px
+        );
 
     letter-spacing: -1px;
 
@@ -211,9 +215,11 @@ p {
 
     min-height: 52px;
 
-    padding: 0 28px;
+    padding:
+        0 28px;
 
-    border: 1px solid transparent;
+    border:
+        1px solid transparent;
 
     border-radius: var(--raio);
 
@@ -236,7 +242,10 @@ p {
 
 
 .btn:hover {
-    transform: translateY(-2px);
+
+    transform:
+        translateY(-2px);
+
 }
 
 
@@ -251,7 +260,8 @@ p {
     color: var(--branco);
 
     box-shadow:
-        0 8px 22px rgba(
+        0 8px 22px
+        rgba(
             255,
             90,
             31,
@@ -263,12 +273,14 @@ p {
 
 .btn-primary:hover {
 
-    background: var(--laranja-escuro);
+    background:
+        var(--laranja-escuro);
 
     color: var(--branco);
 
     box-shadow:
-        0 12px 28px rgba(
+        0 12px 28px
+        rgba(
             223,
             66,
             16,
@@ -301,11 +313,14 @@ p {
 
 .btn-secondary:hover {
 
-    background: var(--branco);
+    background:
+        var(--branco);
 
-    color: var(--azul);
+    color:
+        var(--azul);
 
-    border-color: var(--branco);
+    border-color:
+        var(--branco);
 
 }
 
@@ -323,14 +338,16 @@ p {
 
     z-index: 1000;
 
-    width: min(
-        calc(100% - 40px),
-        1240px
-    );
+    width:
+        min(
+            calc(100% - 40px),
+            1240px
+        );
 
     margin: 0;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
     background:
         rgba(
@@ -360,12 +377,18 @@ p {
             0.28
         );
 
-    backdrop-filter: blur(14px);
+    backdrop-filter:
+        blur(14px);
 
-    -webkit-backdrop-filter: blur(14px);
+    -webkit-backdrop-filter:
+        blur(14px);
 
 }
 
+
+/* ==========================================================
+   HEADER CONTAINER
+========================================================== */
 
 .header-container {
 
@@ -475,7 +498,8 @@ p {
 
     height: 2px;
 
-    background: var(--laranja);
+    background:
+        var(--laranja);
 
     transition:
         width var(--transicao);
@@ -485,7 +509,8 @@ p {
 
 .nav a:hover {
 
-    color: var(--branco);
+    color:
+        var(--branco);
 
 }
 
@@ -498,19 +523,34 @@ p {
 
 
 /* ==========================================================
-   BOTÃO DO HEADER
+   BOTÃO HEADER
 ========================================================== */
 
 .btn-header {
 
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
     min-height: 44px;
+
+    width: auto;
+
+    max-width: 220px;
 
     padding:
         0 20px;
 
-    background: var(--laranja);
+    background:
+        var(--laranja);
 
-    color: var(--branco);
+    color:
+        var(--branco);
+
+    border:
+        0;
 
     border-radius: 5px;
 
@@ -520,16 +560,42 @@ p {
 
     white-space: nowrap;
 
+    cursor: pointer;
+
     justify-self: end;
+
+    transition:
+        background var(--transicao),
+        transform var(--transicao),
+        box-shadow var(--transicao);
 
 }
 
 
 .btn-header:hover {
 
-    background: var(--laranja-escuro);
+    background:
+        var(--laranja-escuro);
 
-    color: var(--branco);
+    color:
+        var(--branco);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* ==========================================================
+   EVITA QUE O DATA-V8 ALTERE BOTÕES
+========================================================== */
+
+.btn[data-v8],
+.btn-header[data-v8] {
+
+    width: auto;
+
+    max-width: 100%;
 
 }
 
@@ -545,9 +611,13 @@ p {
     width: 44px;
     height: 44px;
 
+    min-width: 44px;
+    min-height: 44px;
+
     padding: 0;
 
     align-items: center;
+
     justify-content: center;
 
     flex-direction: column;
@@ -580,7 +650,8 @@ p {
 
     height: 2px;
 
-    background: var(--branco);
+    background:
+        var(--branco);
 
     border-radius: 2px;
 
@@ -591,7 +662,9 @@ p {
 }
 
 
-/* HAMBÚRGUER ABERTO */
+/* ==========================================================
+   HAMBÚRGUER ABERTO
+========================================================== */
 
 .menu-toggle.active span:nth-child(1) {
 
@@ -623,7 +696,9 @@ p {
 ========================================================== */
 
 .btn-full {
+
     width: 100%;
+
 }
 
 
@@ -654,7 +729,8 @@ p {
         center center /
         cover no-repeat;
 
-    color: var(--branco);
+    color:
+        var(--branco);
 
 }
 
@@ -693,10 +769,11 @@ p {
 
 .hero-content {
 
-    width: min(
-        720px,
-        100%
-    );
+    width:
+        min(
+            720px,
+            100%
+        );
 
 }
 
@@ -707,7 +784,8 @@ p {
 
     margin-bottom: 28px;
 
-    color: var(--branco);
+    color:
+        var(--branco);
 
     letter-spacing: -2px;
 
@@ -752,10 +830,15 @@ p {
 
 .section {
 
-    padding: 110px 0;
+    padding:
+        110px 0;
 
 }
 
+
+/* ==========================================================
+   CABEÇALHO DAS SEÇÕES
+========================================================== */
 
 .section-heading {
 
@@ -770,7 +853,8 @@ p {
 
     margin-bottom: 20px;
 
-    color: var(--azul);
+    color:
+        var(--azul);
 
 }
 
@@ -792,7 +876,8 @@ p {
 
 .section-about {
 
-    background: var(--branco);
+    background:
+        var(--branco);
 
 }
 
@@ -825,7 +910,8 @@ p {
 
 .about-content p:first-child {
 
-    color: var(--azul);
+    color:
+        var(--azul);
 
     font-size: 23px;
 
@@ -840,9 +926,11 @@ p {
 
 .section-numbers {
 
-    padding: 80px 0;
+    padding:
+        80px 0;
 
-    background: var(--fundo-claro);
+    background:
+        var(--fundo-claro);
 
     border-top:
         1px solid
@@ -894,7 +982,8 @@ p {
 
     margin-bottom: 22px;
 
-    color: var(--laranja);
+    color:
+        var(--laranja);
 
     font-size: 14px;
 
@@ -907,7 +996,8 @@ p {
 
     margin-bottom: 12px;
 
-    color: var(--azul);
+    color:
+        var(--azul);
 
     font-size: 20px;
 
@@ -929,7 +1019,8 @@ p {
 
 .section-services {
 
-    background: var(--branco);
+    background:
+        var(--branco);
 
 }
 
@@ -957,13 +1048,15 @@ p {
 
     overflow: hidden;
 
-    background: var(--branco);
+    background:
+        var(--branco);
 
     border:
         1px solid
         var(--borda);
 
-    border-radius: var(--raio);
+    border-radius:
+        var(--raio);
 
     transition:
         transform var(--transicao),
@@ -975,7 +1068,8 @@ p {
 
 .service-card:hover {
 
-    transform: translateY(-6px);
+    transform:
+        translateY(-6px);
 
     border-color:
         rgba(
@@ -985,7 +1079,8 @@ p {
             0.60
         );
 
-    box-shadow: var(--sombra);
+    box-shadow:
+        var(--sombra);
 
 }
 
@@ -1000,11 +1095,13 @@ p {
 
     width: 100%;
 
-    aspect-ratio: 16 / 10;
+    aspect-ratio:
+        16 / 10;
 
     overflow: hidden;
 
-    background: var(--fundo-claro);
+    background:
+        var(--fundo-claro);
 
 }
 
@@ -1052,7 +1149,8 @@ p {
 .service-card:hover
 .service-image img {
 
-    transform: scale(1.05);
+    transform:
+        scale(1.05);
 
 }
 
@@ -1065,7 +1163,8 @@ p {
 
     position: relative;
 
-    padding: 30px;
+    padding:
+        30px;
 
 }
 
@@ -1076,7 +1175,8 @@ p {
 
     margin-bottom: 14px;
 
-    color: var(--laranja);
+    color:
+        var(--laranja);
 
     font-size: 12px;
 
@@ -1091,7 +1191,8 @@ p {
 
     margin-bottom: 14px;
 
-    color: var(--azul);
+    color:
+        var(--azul);
 
     font-size: 24px;
 
@@ -1121,7 +1222,10 @@ p {
 
     align-items: center;
 
-    color: var(--azul);
+    width: auto;
+
+    color:
+        var(--azul);
 
     font-size: 13px;
 
@@ -1136,9 +1240,11 @@ p {
 
 .service-link:hover {
 
-    color: var(--laranja);
+    color:
+        var(--laranja);
 
-    transform: translateX(4px);
+    transform:
+        translateX(4px);
 
 }
 
@@ -1149,9 +1255,11 @@ p {
 
 .section-impact {
 
-    background: var(--azul-escuro);
+    background:
+        var(--azul-escuro);
 
-    color: var(--branco);
+    color:
+        var(--branco);
 
 }
 
@@ -1177,7 +1285,8 @@ p {
 
     overflow: hidden;
 
-    border-radius: var(--raio);
+    border-radius:
+        var(--raio);
 
 }
 
@@ -1186,7 +1295,8 @@ p {
 
     width: 100%;
 
-    aspect-ratio: 4 / 3;
+    aspect-ratio:
+        4 / 3;
 
     object-fit: cover;
 
@@ -1197,7 +1307,8 @@ p {
 
     margin-bottom: 24px;
 
-    color: var(--branco);
+    color:
+        var(--branco);
 
 }
 
@@ -1229,7 +1340,8 @@ p {
 
 .section-process {
 
-    background: var(--fundo-claro);
+    background:
+        var(--fundo-claro);
 
 }
 
@@ -1283,9 +1395,11 @@ p {
 
     margin-bottom: 24px;
 
-    background: var(--laranja);
+    background:
+        var(--laranja);
 
-    color: var(--branco);
+    color:
+        var(--branco);
 
     font-size: 13px;
 
@@ -1300,7 +1414,8 @@ p {
 
     margin-bottom: 12px;
 
-    color: var(--azul);
+    color:
+        var(--azul);
 
     font-size: 21px;
 
@@ -1322,7 +1437,8 @@ p {
 
 .section-contact {
 
-    background: var(--branco);
+    background:
+        var(--branco);
 
 }
 
@@ -1350,7 +1466,8 @@ p {
 
     margin-bottom: 22px;
 
-    color: var(--azul);
+    color:
+        var(--azul);
 
 }
 
@@ -1393,7 +1510,10 @@ p {
 
     gap: 3px;
 
-    padding: 18px 0;
+    width: 100%;
+
+    padding:
+        18px 0;
 
     border-bottom:
         1px solid
@@ -1423,7 +1543,8 @@ p {
 
 .contact-links strong {
 
-    color: var(--azul);
+    color:
+        var(--azul);
 
     font-size: 15px;
 
@@ -1432,7 +1553,8 @@ p {
 
 .contact-links span {
 
-    color: var(--texto-secundario);
+    color:
+        var(--texto-secundario);
 
     font-size: 14px;
 
@@ -1445,15 +1567,20 @@ p {
 
 .contact-form-wrapper {
 
-    padding: 40px;
+    width: 100%;
 
-    background: var(--fundo-claro);
+    padding:
+        40px;
+
+    background:
+        var(--fundo-claro);
 
     border:
         1px solid
         var(--borda);
 
-    border-radius: var(--raio);
+    border-radius:
+        var(--raio);
 
 }
 
@@ -1482,7 +1609,8 @@ p {
 
 .form-group label {
 
-    color: var(--azul);
+    color:
+        var(--azul);
 
     font-size: 13px;
 
@@ -1499,15 +1627,18 @@ p {
     padding:
         15px 16px;
 
-    background: var(--branco);
+    background:
+        var(--branco);
 
-    color: var(--texto);
+    color:
+        var(--texto);
 
     border:
         1px solid
         var(--borda);
 
-    border-radius: var(--raio);
+    border-radius:
+        var(--raio);
 
     outline: none;
 
@@ -1537,7 +1668,8 @@ p {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
 
-    color: #98A2B3;
+    color:
+        #98A2B3;
 
 }
 
@@ -1545,7 +1677,8 @@ p {
 .form-group input:focus,
 .form-group textarea:focus {
 
-    border-color: var(--laranja);
+    border-color:
+        var(--laranja);
 
     box-shadow:
         0 0 0 3px
@@ -1565,9 +1698,11 @@ p {
 
 .footer {
 
-    background: var(--azul-escuro);
+    background:
+        var(--azul-escuro);
 
-    color: var(--branco);
+    color:
+        var(--branco);
 
 }
 
@@ -1641,7 +1776,8 @@ p {
 
 .footer-company strong {
 
-    color: var(--branco);
+    color:
+        var(--branco);
 
     font-size: 18px;
 
@@ -1680,6 +1816,8 @@ p {
 
 .footer-social a {
 
+    width: auto;
+
     color:
         rgba(
             255,
@@ -1698,7 +1836,8 @@ p {
 
 .footer-social a:hover {
 
-    color: var(--laranja);
+    color:
+        var(--laranja);
 
 }
 
@@ -1709,7 +1848,8 @@ p {
 
 .footer-bottom {
 
-    padding: 22px 0;
+    padding:
+        22px 0;
 
     border-top:
         1px solid
@@ -1739,13 +1879,225 @@ p {
 
 
 /* ==========================================================
+   WHATSAPP V8
+   CORREÇÃO DO BOTÃO GIGANTE
+========================================================== */
+
+/*
+   O V8 Loader transforma:
+   data-v8="contact.whatsapp"
+
+   em um link para o WhatsApp.
+
+   Estas regras impedem que esse link
+   ocupe a tela inteira.
+*/
+
+a[data-v8="contact.whatsapp"] {
+
+    position: fixed !important;
+
+    right: 22px !important;
+
+    bottom: 22px !important;
+
+    z-index: 9999 !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    width: 58px !important;
+
+    height: 58px !important;
+
+    min-width: 58px !important;
+
+    min-height: 58px !important;
+
+    max-width: 58px !important;
+
+    max-height: 58px !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    background:
+        #25D366 !important;
+
+    color:
+        #FFFFFF !important;
+
+    border:
+        0 !important;
+
+    border-radius:
+        50% !important;
+
+    text-decoration: none !important;
+
+    overflow: hidden !important;
+
+    font-size: 0 !important;
+
+    line-height: 1 !important;
+
+    box-shadow:
+        0 8px 24px
+        rgba(
+            0,
+            0,
+            0,
+            0.22
+        );
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* ==========================================================
+   WHATSAPP — HOVER
+========================================================== */
+
+a[data-v8="contact.whatsapp"]:hover {
+
+    transform:
+        scale(1.08) !important;
+
+    background:
+        #25D366 !important;
+
+    color:
+        #FFFFFF !important;
+
+    box-shadow:
+        0 12px 30px
+        rgba(
+            0,
+            0,
+            0,
+            0.28
+        );
+
+}
+
+
+/* ==========================================================
+   WHATSAPP — IMAGEM
+========================================================== */
+
+a[data-v8="contact.whatsapp"] img {
+
+    display: block !important;
+
+    width: 30px !important;
+
+    height: 30px !important;
+
+    min-width: 30px !important;
+
+    min-height: 30px !important;
+
+    max-width: 30px !important;
+
+    max-height: 30px !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    object-fit: contain !important;
+
+}
+
+
+/* ==========================================================
+   WHATSAPP — SVG
+========================================================== */
+
+a[data-v8="contact.whatsapp"] svg {
+
+    display: block !important;
+
+    width: 30px !important;
+
+    height: 30px !important;
+
+    min-width: 30px !important;
+
+    min-height: 30px !important;
+
+    max-width: 30px !important;
+
+    max-height: 30px !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+}
+
+
+/* ==========================================================
+   WHATSAPP — FONT AWESOME
+========================================================== */
+
+a[data-v8="contact.whatsapp"] i {
+
+    display: block !important;
+
+    width: auto !important;
+
+    height: auto !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    font-size: 27px !important;
+
+    line-height: 1 !important;
+
+}
+
+
+/* ==========================================================
+   EVITA REGRAS DE OUTROS ELEMENTOS
+   DE AFETAREM O WHATSAPP
+========================================================== */
+
+.contact-links
+a[data-v8="contact.whatsapp"] {
+
+    position: fixed !important;
+
+}
+
+
+.footer-social
+a[data-v8="contact.whatsapp"] {
+
+    position: fixed !important;
+
+}
+
+
+/* ==========================================================
    TABLET
 ========================================================== */
 
 @media (max-width: 1000px) {
 
 
-    /* HEADER */
+    /* ======================================================
+       HEADER
+    ======================================================= */
 
     .header-container {
 
@@ -1773,7 +2125,9 @@ p {
     }
 
 
-    /* NÚMEROS */
+    /* ======================================================
+       NÚMEROS
+    ======================================================= */
 
     .numbers-grid {
 
@@ -1790,12 +2144,23 @@ p {
 
     .number-item:nth-child(2) {
 
-        border-right: 0;
+        border-right:
+            0;
 
     }
 
 
-    /* SERVIÇOS */
+    .number-item:nth-child(4) {
+
+        border-right:
+            0;
+
+    }
+
+
+    /* ======================================================
+       SERVIÇOS
+    ======================================================= */
 
     .services-grid {
 
@@ -1808,7 +2173,9 @@ p {
     }
 
 
-    /* IMPACTO */
+    /* ======================================================
+       IMPACTO
+    ======================================================= */
 
     .impact-container {
 
@@ -1817,7 +2184,9 @@ p {
     }
 
 
-    /* PROCESSO */
+    /* ======================================================
+       PROCESSO
+    ======================================================= */
 
     .process-grid {
 
@@ -1834,16 +2203,19 @@ p {
 
     .process-item {
 
-        padding-right: 25px;
+        padding-right:
+            25px;
 
     }
 
 
     .process-item:not(:last-child) {
 
-        margin-right: 0;
+        margin-right:
+            0;
 
-        border-right: 0;
+        border-right:
+            0;
 
     }
 
@@ -1857,7 +2229,9 @@ p {
     }
 
 
-    /* CONTATO */
+    /* ======================================================
+       CONTATO
+    ======================================================= */
 
     .contact-container {
 
@@ -1875,12 +2249,29 @@ p {
 @media (max-width: 700px) {
 
 
+    /* ======================================================
+       HTML / BODY
+    ======================================================= */
+
     html {
 
-        scroll-padding-top: 95px;
+        scroll-padding-top:
+            95px;
 
     }
 
+
+    body {
+
+        overflow-x:
+            hidden;
+
+    }
+
+
+    /* ======================================================
+       CONTAINER
+    ======================================================= */
 
     .container {
 
@@ -1893,38 +2284,49 @@ p {
     }
 
 
+    /* ======================================================
+       SEÇÕES
+    ======================================================= */
+
     .section {
 
-        padding: 75px 0;
+        padding:
+            75px 0;
 
     }
 
 
     /* ======================================================
-       HEADER MOBILE
+       HEADER
     ======================================================= */
 
     .header {
 
-        top: 12px;
+        top:
+            12px;
 
         width:
             calc(100% - 24px);
 
-        border-radius: 8px;
+        border-radius:
+            8px;
 
     }
 
 
     .header-container {
 
-        min-height: 64px;
+        min-height:
+            64px;
 
-        display: flex;
+        display:
+            flex;
 
-        justify-content: space-between;
+        justify-content:
+            space-between;
 
-        align-items: center;
+        align-items:
+            center;
 
         padding:
             0 14px;
@@ -1934,64 +2336,82 @@ p {
 
     .logo {
 
-        justify-self: auto;
+        justify-self:
+            auto;
 
     }
 
 
     .logo img {
 
-        max-width: 140px;
+        max-width:
+            140px;
 
-        max-height: 43px;
-
-    }
-
-
-    /* ESCONDE BOTÃO DESKTOP */
-
-    .btn-header {
-
-        display: none;
-
-    }
-
-
-    /* MOSTRA HAMBÚRGUER */
-
-    .menu-toggle {
-
-        display: flex;
-
-        flex-shrink: 0;
+        max-height:
+            43px;
 
     }
 
 
     /* ======================================================
-       MENU MOBILE ABERTO
+       BOTÃO DESKTOP
+    ======================================================= */
+
+    .btn-header {
+
+        display:
+            none;
+
+    }
+
+
+    /* ======================================================
+       HAMBÚRGUER
+    ======================================================= */
+
+    .menu-toggle {
+
+        display:
+            flex;
+
+        flex-shrink:
+            0;
+
+    }
+
+
+    /* ======================================================
+       MENU MOBILE
     ======================================================= */
 
     .nav {
 
-        position: absolute;
+        position:
+            absolute;
 
         top:
             calc(100% + 8px);
 
-        left: 0;
+        left:
+            0;
 
-        width: 100%;
+        width:
+            100%;
 
-        display: flex;
+        display:
+            flex;
 
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        align-items: stretch;
+        align-items:
+            stretch;
 
-        gap: 0;
+        gap:
+            0;
 
-        padding: 8px;
+        padding:
+            8px;
 
         background:
             rgba(
@@ -2010,7 +2430,8 @@ p {
                 0.10
             );
 
-        border-radius: 8px;
+        border-radius:
+            8px;
 
         box-shadow:
             0 15px 35px
@@ -2021,14 +2442,17 @@ p {
                 0.30
             );
 
-        opacity: 0;
+        opacity:
+            0;
 
-        visibility: hidden;
+        visibility:
+            hidden;
 
         transform:
             translateY(-8px);
 
-        pointer-events: none;
+        pointer-events:
+            none;
 
         transition:
             opacity var(--transicao),
@@ -2040,21 +2464,25 @@ p {
 
     .nav.active {
 
-        opacity: 1;
+        opacity:
+            1;
 
-        visibility: visible;
+        visibility:
+            visible;
 
         transform:
             translateY(0);
 
-        pointer-events: auto;
+        pointer-events:
+            auto;
 
     }
 
 
     .nav a {
 
-        width: 100%;
+        width:
+            100%;
 
         padding:
             14px 15px;
@@ -2067,9 +2495,11 @@ p {
                 0.90
             );
 
-        font-size: 14px;
+        font-size:
+            14px;
 
-        border-radius: 4px;
+        border-radius:
+            4px;
 
     }
 
@@ -2084,14 +2514,16 @@ p {
                 0.06
             );
 
-        color: var(--branco);
+        color:
+            var(--branco);
 
     }
 
 
     .nav a::after {
 
-        display: none;
+        display:
+            none;
 
     }
 
@@ -2102,7 +2534,8 @@ p {
 
     .hero {
 
-        min-height: 780px;
+        min-height:
+            780px;
 
         background-position:
             center center;
@@ -2112,14 +2545,16 @@ p {
 
     .hero-container {
 
-        padding-top: 90px;
+        padding-top:
+            90px;
 
     }
 
 
     .hero h1 {
 
-        margin-bottom: 22px;
+        margin-bottom:
+            22px;
 
         font-size:
             clamp(
@@ -2128,34 +2563,41 @@ p {
                 58px
             );
 
-        letter-spacing: -1.5px;
+        letter-spacing:
+            -1.5px;
 
     }
 
 
     .hero p {
 
-        margin-bottom: 30px;
+        margin-bottom:
+            30px;
 
-        font-size: 16px;
+        font-size:
+            16px;
 
-        line-height: 1.7;
+        line-height:
+            1.7;
 
     }
 
 
     .hero-actions {
 
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        align-items: stretch;
+        align-items:
+            stretch;
 
     }
 
 
     .hero-actions .btn {
 
-        width: 100%;
+        width:
+            100%;
 
     }
 
@@ -2166,14 +2608,16 @@ p {
 
     .section-heading {
 
-        margin-bottom: 40px;
+        margin-bottom:
+            40px;
 
     }
 
 
     .section-heading h2 {
 
-        font-size: 34px;
+        font-size:
+            34px;
 
     }
 
@@ -2184,23 +2628,27 @@ p {
 
     .about-content {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
-        gap: 25px;
+        gap:
+            25px;
 
     }
 
 
     .about-content p {
 
-        font-size: 16px;
+        font-size:
+            16px;
 
     }
 
 
     .about-content p:first-child {
 
-        font-size: 20px;
+        font-size:
+            20px;
 
     }
 
@@ -2211,25 +2659,30 @@ p {
 
     .section-numbers {
 
-        padding: 60px 0;
+        padding:
+            60px 0;
 
     }
 
 
     .numbers-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
-        gap: 0;
+        gap:
+            0;
 
     }
 
 
     .number-item {
 
-        padding: 25px 0;
+        padding:
+            25px 0;
 
-        border-right: 0;
+        border-right:
+            0;
 
         border-bottom:
             1px solid
@@ -2240,16 +2693,19 @@ p {
 
     .number-item:first-child {
 
-        padding-top: 0;
+        padding-top:
+            0;
 
     }
 
 
     .number-item:last-child {
 
-        padding-bottom: 0;
+        padding-bottom:
+            0;
 
-        border-bottom: 0;
+        border-bottom:
+            0;
 
     }
 
@@ -2260,37 +2716,43 @@ p {
 
     .services-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
-        gap: 20px;
+        gap:
+            20px;
 
     }
 
 
     .service-image {
 
-        aspect-ratio: 16 / 10;
+        aspect-ratio:
+            16 / 10;
 
     }
 
 
     .service-content {
 
-        padding: 25px;
+        padding:
+            25px;
 
     }
 
 
     .service-content h3 {
 
-        font-size: 22px;
+        font-size:
+            22px;
 
     }
 
 
     .service-content p {
 
-        min-height: auto;
+        min-height:
+            auto;
 
     }
 
@@ -2301,23 +2763,27 @@ p {
 
     .impact-container {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
-        gap: 40px;
+        gap:
+            40px;
 
     }
 
 
     .impact-content h2 {
 
-        font-size: 36px;
+        font-size:
+            36px;
 
     }
 
 
     .impact-content p {
 
-        font-size: 16px;
+        font-size:
+            16px;
 
     }
 
@@ -2328,9 +2794,11 @@ p {
 
     .process-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
-        gap: 0;
+        gap:
+            0;
 
     }
 
@@ -2341,7 +2809,8 @@ p {
         padding:
             25px 0;
 
-        border-right: 0;
+        border-right:
+            0;
 
         border-bottom:
             1px solid
@@ -2352,16 +2821,19 @@ p {
 
     .process-item:first-child {
 
-        padding-top: 0;
+        padding-top:
+            0;
 
     }
 
 
     .process-item:last-child {
 
-        padding-bottom: 0;
+        padding-bottom:
+            0;
 
-        border-bottom: 0;
+        border-bottom:
+            0;
 
     }
 
@@ -2372,23 +2844,27 @@ p {
 
     .contact-container {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
-        gap: 45px;
+        gap:
+            45px;
 
     }
 
 
     .contact-content h2 {
 
-        font-size: 36px;
+        font-size:
+            36px;
 
     }
 
 
     .contact-form-wrapper {
 
-        padding: 25px;
+        padding:
+            25px;
 
     }
 
@@ -2399,20 +2875,90 @@ p {
 
     .footer-container {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
-        gap: 35px;
+        gap:
+            35px;
 
-        padding-top: 50px;
+        padding-top:
+            50px;
 
-        padding-bottom: 50px;
+        padding-bottom:
+            50px;
 
     }
 
 
     .footer-social {
 
-        justify-content: flex-start;
+        justify-content:
+            flex-start;
+
+    }
+
+
+    /* ======================================================
+       WHATSAPP MOBILE
+    ======================================================= */
+
+    a[data-v8="contact.whatsapp"] {
+
+        right:
+            16px !important;
+
+        bottom:
+            16px !important;
+
+        width:
+            54px !important;
+
+        height:
+            54px !important;
+
+        min-width:
+            54px !important;
+
+        min-height:
+            54px !important;
+
+        max-width:
+            54px !important;
+
+        max-height:
+            54px !important;
+
+    }
+
+
+    a[data-v8="contact.whatsapp"] img,
+    a[data-v8="contact.whatsapp"] svg {
+
+        width:
+            28px !important;
+
+        height:
+            28px !important;
+
+        min-width:
+            28px !important;
+
+        min-height:
+            28px !important;
+
+        max-width:
+            28px !important;
+
+        max-height:
+            28px !important;
+
+    }
+
+
+    a[data-v8="contact.whatsapp"] i {
+
+        font-size:
+            25px !important;
 
     }
 
@@ -2431,14 +2977,16 @@ p {
         width:
             calc(100% - 20px);
 
-        top: 10px;
+        top:
+            10px;
 
     }
 
 
     .header-container {
 
-        min-height: 60px;
+        min-height:
+            60px;
 
         padding:
             0 11px;
@@ -2448,46 +2996,60 @@ p {
 
     .logo img {
 
-        max-width: 125px;
+        max-width:
+            125px;
 
-        max-height: 40px;
+        max-height:
+            40px;
 
     }
 
 
     .menu-toggle {
 
-        width: 42px;
+        width:
+            42px;
 
-        height: 42px;
+        height:
+            42px;
+
+        min-width:
+            42px;
+
+        min-height:
+            42px;
 
     }
 
 
     .hero {
 
-        min-height: 720px;
+        min-height:
+            720px;
 
     }
 
 
     .hero h1 {
 
-        font-size: 39px;
+        font-size:
+            39px;
 
     }
 
 
     .hero p {
 
-        font-size: 15px;
+        font-size:
+            15px;
 
     }
 
 
     .section-heading h2 {
 
-        font-size: 30px;
+        font-size:
+            30px;
 
     }
 
@@ -2495,14 +3057,73 @@ p {
     .impact-content h2,
     .contact-content h2 {
 
-        font-size: 31px;
+        font-size:
+            31px;
 
     }
 
 
     .contact-form-wrapper {
 
-        padding: 20px;
+        padding:
+            20px;
+
+    }
+
+
+    /* ======================================================
+       WHATSAPP MOBILE PEQUENO
+    ======================================================= */
+
+    a[data-v8="contact.whatsapp"] {
+
+        right:
+            14px !important;
+
+        bottom:
+            14px !important;
+
+        width:
+            52px !important;
+
+        height:
+            52px !important;
+
+        min-width:
+            52px !important;
+
+        min-height:
+            52px !important;
+
+        max-width:
+            52px !important;
+
+        max-height:
+            52px !important;
+
+    }
+
+
+    a[data-v8="contact.whatsapp"] img,
+    a[data-v8="contact.whatsapp"] svg {
+
+        width:
+            27px !important;
+
+        height:
+            27px !important;
+
+        min-width:
+            27px !important;
+
+        min-height:
+            27px !important;
+
+        max-width:
+            27px !important;
+
+        max-height:
+            27px !important;
 
     }
 
@@ -2519,7 +3140,8 @@ p {
         2px solid
         var(--laranja);
 
-    outline-offset: 4px;
+    outline-offset:
+        4px;
 
 }
 
@@ -2532,7 +3154,8 @@ p {
 
     html {
 
-        scroll-behavior: auto;
+        scroll-behavior:
+            auto;
 
     }
 
