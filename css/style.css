@@ -1,11 +1,12 @@
 /* ==========================================================
    CSNEED — ENGENHARIA & SOLUÇÕES
    STYLE.CSS — V3 PREMIUM
+   VERSÃO COMPLETA + NUMERADA
    ========================================================== */
 
 
 /* ==========================================================
-   VARIÁVEIS
+   01. VARIÁVEIS
 ========================================================== */
 
 :root {
@@ -57,7 +58,7 @@
 
 
 /* ==========================================================
-   RESET
+   02. RESET
 ========================================================== */
 
 * {
@@ -130,7 +131,7 @@ p {
 
 
 /* ==========================================================
-   CONTAINER
+   03. CONTAINER
 ========================================================== */
 
 .container {
@@ -144,7 +145,7 @@ p {
 
 
 /* ==========================================================
-   HEADER
+   04. HEADER
 ========================================================== */
 
 .header {
@@ -177,8 +178,14 @@ p {
     -webkit-backdrop-filter: blur(16px);
 }
 
+
+/* ==========================================================
+   05. HEADER CONTAINER
+========================================================== */
+
 .header-container {
     position: relative;
+
     min-height: 82px;
 
     display: flex;
@@ -190,30 +197,45 @@ p {
         9px 18px;
 }
 
+
+/* ==========================================================
+   06. LOGO / BRAND
+========================================================== */
+
 .brand {
     display: flex;
     align-items: center;
 
     flex-shrink: 0;
+
+    position: relative;
+    z-index: 3;
 }
 
 .brand img {
     width: auto;
+
     max-width: 220px;
     max-height: 64px;
 
     object-fit: contain;
 }
 
+
+/* ==========================================================
+   07. NAVEGAÇÃO DESKTOP
+========================================================== */
+
 .nav {
     position: absolute;
+
     left: 50%;
     top: 50%;
+
     transform: translate(-50%, -50%);
 
     display: flex;
     align-items: center;
-
     justify-content: center;
 
     gap: 28px;
@@ -221,12 +243,15 @@ p {
     margin-left: 0;
 
     white-space: nowrap;
+
+    z-index: 2;
 }
 
 .nav a {
     position: relative;
 
-    color: rgba(255,255,255,.82);
+    color:
+        rgba(255,255,255,.82);
 
     font-size: .86rem;
     font-weight: 600;
@@ -246,7 +271,8 @@ p {
     width: 0;
     height: 2px;
 
-    background: var(--laranja);
+    background:
+        var(--laranja);
 
     transition:
         width var(--transicao);
@@ -262,7 +288,7 @@ p {
 
 
 /* ==========================================================
-   BOTÕES
+   08. BOTÕES — BASE
 ========================================================== */
 
 .btn {
@@ -297,6 +323,11 @@ p {
     transform: translateY(-2px);
 }
 
+
+/* ==========================================================
+   09. BOTÃO PRINCIPAL
+========================================================== */
+
 .btn-primary {
     color: var(--branco);
 
@@ -316,6 +347,11 @@ p {
         0 15px 32px rgba(255,90,31,.32);
 }
 
+
+/* ==========================================================
+   10. BOTÃO OUTLINE
+========================================================== */
+
 .btn-outline {
     color: var(--branco);
 
@@ -329,20 +365,37 @@ p {
 }
 
 .btn-outline:hover {
-    border-color: var(--laranja);
+    border-color:
+        var(--laranja);
 
     background:
         rgba(255,90,31,.08);
 }
 
+
+/* ==========================================================
+   11. BOTÃO DO HEADER
+   CORREÇÃO:
+   Fica sempre no canto superior direito da barra.
+========================================================== */
+
 .btn-header {
+    position: relative;
+
+    z-index: 3;
+
+    flex-shrink: 0;
+
+    margin-left: auto;
+
     min-height: 43px;
 
     padding-inline: 18px;
 
     color: var(--branco);
 
-    background: var(--laranja);
+    background:
+        var(--laranja);
 
     font-size: .8rem;
 
@@ -351,8 +404,14 @@ p {
 }
 
 .btn-header:hover {
-    background: var(--laranja-escuro);
+    background:
+        var(--laranja-escuro);
 }
+
+
+/* ==========================================================
+   12. MENU HAMBÚRGUER
+========================================================== */
 
 .menu-toggle {
     display: none;
@@ -385,11 +444,13 @@ p {
     width: 20px;
     height: 2px;
 
-    background: var(--branco);
+    background:
+        var(--branco);
 
     border-radius: 10px;
 
-    transition: var(--transicao);
+    transition:
+        var(--transicao);
 }
 
 .menu-toggle {
@@ -410,7 +471,7 @@ p {
 
 
 /* ==========================================================
-   HERO
+   13. HERO
    NÃO ALTERAR O BACKGROUND
 ========================================================== */
 
@@ -456,13 +517,29 @@ p {
         );
 }
 
+
+/* ==========================================================
+   14. HERO CONTAINER
+========================================================== */
+
 .hero-container {
     padding-top: 90px;
 }
 
+
+/* ==========================================================
+   15. HERO CONTENT
+========================================================== */
+
 .hero-content {
-    width: min(760px, 100%);
+    width:
+        min(760px, 100%);
 }
+
+
+/* ==========================================================
+   16. EYEBROW
+========================================================== */
 
 .eyebrow {
     display: inline-flex;
@@ -472,7 +549,8 @@ p {
 
     margin-bottom: 18px;
 
-    color: var(--laranja);
+    color:
+        var(--laranja);
 
     font-size: .75rem;
     font-weight: 800;
@@ -487,10 +565,16 @@ p {
     width: 25px;
     height: 2px;
 
-    background: currentColor;
+    background:
+        currentColor;
 
     border-radius: 10px;
 }
+
+
+/* ==========================================================
+   17. HERO TÍTULO
+========================================================== */
 
 .hero h1 {
     max-width: 780px;
@@ -508,17 +592,24 @@ p {
 }
 
 .hero h1 strong {
-    color: var(--laranja);
+    color:
+        var(--laranja);
 
     font-weight: 800;
 }
+
+
+/* ==========================================================
+   18. HERO TEXTO
+========================================================== */
 
 .hero p {
     max-width: 650px;
 
     margin-bottom: 34px;
 
-    color: rgba(255,255,255,.75);
+    color:
+        rgba(255,255,255,.75);
 
     font-size:
         clamp(1rem, 1.6vw, 1.12rem);
@@ -526,8 +617,14 @@ p {
     line-height: 1.75;
 }
 
+
+/* ==========================================================
+   19. HERO AÇÕES
+========================================================== */
+
 .hero-actions {
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 12px;
@@ -535,7 +632,7 @@ p {
 
 
 /* ==========================================================
-   SEÇÕES
+   20. SEÇÕES
 ========================================================== */
 
 .section {
@@ -546,11 +643,13 @@ p {
 }
 
 .section-light {
-    background: var(--fundo-claro);
+    background:
+        var(--fundo-claro);
 }
 
 #sobre {
-    background: var(--branco);
+    background:
+        var(--branco);
 }
 
 .services-section {
@@ -561,6 +660,11 @@ p {
             #FFFFFF 100%
         );
 }
+
+
+/* ==========================================================
+   21. CABEÇALHO DAS SEÇÕES
+========================================================== */
 
 .section-heading {
     max-width: 760px;
@@ -581,7 +685,8 @@ p {
 .section-heading h2 {
     margin-bottom: 16px;
 
-    color: var(--azul);
+    color:
+        var(--azul);
 
     font-size:
         clamp(2rem, 4vw, 3.2rem);
@@ -601,7 +706,7 @@ p {
 
 
 /* ==========================================================
-   ABOUT
+   22. ABOUT
 ========================================================== */
 
 .about-grid {
@@ -646,7 +751,8 @@ p {
     border:
         1px solid var(--borda);
 
-    border-radius: var(--raio-grande);
+    border-radius:
+        var(--raio-grande);
 
     background:
         linear-gradient(
@@ -655,7 +761,8 @@ p {
             #F4F6F9
         );
 
-    box-shadow: var(--sombra-suave);
+    box-shadow:
+        var(--sombra-suave);
 }
 
 .about-highlight::before {
@@ -683,7 +790,8 @@ p {
     display: flex;
     flex-direction: column;
 
-    padding: 24px 26px;
+    padding:
+        24px 26px;
 
     border-bottom:
         1px solid var(--borda);
@@ -696,21 +804,22 @@ p {
 .highlight-item strong {
     margin-bottom: 5px;
 
-    color: var(--azul);
+    color:
+        var(--azul);
 
     font-size: 1.08rem;
 }
 
 .highlight-item span {
-    color: var(--texto-secundario);
+    color:
+        var(--texto-secundario);
 
     font-size: .9rem;
 }
 
 
 /* ==========================================================
-   DIFERENCIAIS
-   SVG NO LUGAR DOS NÚMEROS
+   23. DIFERENCIAIS
 ========================================================== */
 
 .numbers {
@@ -725,7 +834,8 @@ p {
             var(--azul)
         );
 
-    color: var(--branco);
+    color:
+        var(--branco);
 
     overflow: hidden;
 }
@@ -789,7 +899,8 @@ p {
     background:
         rgba(255,255,255,.055);
 
-    transform: translateY(-4px);
+    transform:
+        translateY(-4px);
 }
 
 .number-icon {
@@ -803,7 +914,8 @@ p {
 
     margin-bottom: 20px;
 
-    color: var(--laranja);
+    color:
+        var(--laranja);
 
     border:
         1px solid rgba(255,90,31,.32);
@@ -820,7 +932,8 @@ p {
 
     fill: none;
 
-    stroke: currentColor;
+    stroke:
+        currentColor;
 
     stroke-width: 1.8;
 
@@ -833,27 +946,27 @@ p {
 
     margin-bottom: 5px;
 
-    color: var(--branco);
+    color:
+        var(--branco);
 
     font-size: 1rem;
 }
 
 .number-item span {
-    color: var(--texto-claro);
+    color:
+        var(--texto-claro);
 
     font-size: .86rem;
 }
 
-
-/* Compatibilidade caso os números antigos ainda existam */
-
 .number-item > strong:first-child {
-    color: var(--branco);
+    color:
+        var(--branco);
 }
 
 
 /* ==========================================================
-   SERVICES
+   24. SERVIÇOS
 ========================================================== */
 
 .services-grid {
@@ -873,9 +986,11 @@ p {
     border:
         1px solid var(--borda);
 
-    border-radius: var(--raio-grande);
+    border-radius:
+        var(--raio-grande);
 
-    background: var(--branco);
+    background:
+        var(--branco);
 
     box-shadow:
         0 8px 30px rgba(7,27,82,.055);
@@ -887,13 +1002,20 @@ p {
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
+    transform:
+        translateY(-8px);
 
     border-color:
         rgba(255,90,31,.32);
 
-    box-shadow: var(--sombra);
+    box-shadow:
+        var(--sombra);
 }
+
+
+/* ==========================================================
+   25. IMAGEM DOS SERVIÇOS
+========================================================== */
 
 .service-image {
     position: relative;
@@ -932,13 +1054,20 @@ p {
 }
 
 .service-card:hover .service-image img {
-    transform: scale(1.06);
+    transform:
+        scale(1.06);
 }
+
+
+/* ==========================================================
+   26. CONTEÚDO DOS SERVIÇOS
+========================================================== */
 
 .service-content {
     position: relative;
 
-    padding: 27px 28px 30px;
+    padding:
+        27px 28px 30px;
 }
 
 .service-number {
@@ -952,7 +1081,8 @@ p {
 
     margin-bottom: 16px;
 
-    color: var(--laranja);
+    color:
+        var(--laranja);
 
     border:
         1px solid rgba(255,90,31,.25);
@@ -965,20 +1095,14 @@ p {
     font-size: 0;
 }
 
-/*
-   Caso o HTML seja atualizado para SVG:
-   <span class="service-number">
-       <svg>...</svg>
-   </span>
-*/
-
 .service-number svg {
     width: 22px;
     height: 22px;
 
     fill: none;
 
-    stroke: currentColor;
+    stroke:
+        currentColor;
 
     stroke-width: 1.8;
 
@@ -989,7 +1113,8 @@ p {
 .service-content h3 {
     margin-bottom: 9px;
 
-    color: var(--azul);
+    color:
+        var(--azul);
 
     font-size: 1.18rem;
 
@@ -1004,11 +1129,12 @@ p {
 
 
 /* ==========================================================
-   GALERIA
+   27. GALERIA
 ========================================================== */
 
 .v8-media-section {
-    background: var(--branco);
+    background:
+        var(--branco);
 }
 
 .v8-gallery {
@@ -1040,14 +1166,16 @@ p {
 }
 
 .v8-gallery img:hover {
-    transform: translateY(-5px);
+    transform:
+        translateY(-5px);
 
-    box-shadow: var(--sombra);
+    box-shadow:
+        var(--sombra);
 }
 
 
 /* ==========================================================
-   VÍDEO
+   28. VÍDEO
 ========================================================== */
 
 .v8-video-section {
@@ -1066,9 +1194,11 @@ p {
     border:
         1px solid var(--borda);
 
-    background: #000;
+    background:
+        #000;
 
-    box-shadow: var(--sombra);
+    box-shadow:
+        var(--sombra);
 }
 
 .v8-video[hidden] {
@@ -1077,13 +1207,14 @@ p {
 
 
 /* ==========================================================
-   IMPACT
+   29. IMPACTO
 ========================================================== */
 
 .impact {
     position: relative;
 
-    padding: 105px 0;
+    padding:
+        105px 0;
 
     overflow: hidden;
 
@@ -1095,7 +1226,8 @@ p {
             #0A2C76 100%
         );
 
-    color: var(--branco);
+    color:
+        var(--branco);
 }
 
 .impact::before {
@@ -1136,8 +1268,14 @@ p {
         1px solid rgba(255,255,255,.08);
 }
 
+
+/* ==========================================================
+   30. IMPACT CONTAINER
+========================================================== */
+
 .impact-container {
     position: relative;
+
     z-index: 1;
 
     display: grid;
@@ -1151,7 +1289,8 @@ p {
 }
 
 .impact-content .eyebrow {
-    color: var(--laranja);
+    color:
+        var(--laranja);
 }
 
 .impact-content h2 {
@@ -1170,10 +1309,16 @@ p {
 .impact-content p {
     max-width: 620px;
 
-    color: rgba(255,255,255,.68);
+    color:
+        rgba(255,255,255,.68);
 
     line-height: 1.8;
 }
+
+
+/* ==========================================================
+   31. IMPACT BOX
+========================================================== */
 
 .impact-box {
     position: relative;
@@ -1191,7 +1336,8 @@ p {
     border:
         1px solid rgba(255,255,255,.14);
 
-    border-radius: var(--raio-grande);
+    border-radius:
+        var(--raio-grande);
 
     background:
         linear-gradient(
@@ -1204,7 +1350,8 @@ p {
         inset 0 1px 0 rgba(255,255,255,.08),
         0 25px 70px rgba(0,0,0,.18);
 
-    backdrop-filter: blur(12px);
+    backdrop-filter:
+        blur(12px);
 }
 
 .impact-box::before {
@@ -1218,7 +1365,8 @@ p {
     width: 45px;
     height: 3px;
 
-    background: var(--laranja);
+    background:
+        var(--laranja);
 
     border-radius: 10px;
 }
@@ -1226,7 +1374,8 @@ p {
 .impact-box span {
     margin-bottom: 5px;
 
-    color: var(--laranja);
+    color:
+        var(--laranja);
 
     font-size: .8rem;
     font-weight: 800;
@@ -1235,7 +1384,8 @@ p {
 }
 
 .impact-box strong {
-    color: var(--branco);
+    color:
+        var(--branco);
 
     font-size:
         clamp(1.5rem, 3vw, 2.3rem);
@@ -1245,7 +1395,7 @@ p {
 
 
 /* ==========================================================
-   PROCESSO
+   32. PROCESSO
 ========================================================== */
 
 .process-grid {
@@ -1267,7 +1417,8 @@ p {
     border:
         1px solid var(--borda);
 
-    border-radius: var(--raio-grande);
+    border-radius:
+        var(--raio-grande);
 
     background:
         var(--branco);
@@ -1282,13 +1433,20 @@ p {
 }
 
 .process-item:hover {
-    transform: translateY(-7px);
+    transform:
+        translateY(-7px);
 
     border-color:
         rgba(255,90,31,.30);
 
-    box-shadow: var(--sombra);
+    box-shadow:
+        var(--sombra);
 }
+
+
+/* ==========================================================
+   33. ÍCONE DO PROCESSO
+========================================================== */
 
 .process-icon {
     width: 52px;
@@ -1301,7 +1459,8 @@ p {
 
     margin-bottom: 25px;
 
-    color: var(--laranja);
+    color:
+        var(--laranja);
 
     border:
         1px solid rgba(255,90,31,.25);
@@ -1322,7 +1481,8 @@ p {
 
     fill: none;
 
-    stroke: currentColor;
+    stroke:
+        currentColor;
 
     stroke-width: 1.8;
 
@@ -1341,7 +1501,8 @@ p {
 
     margin-bottom: 25px;
 
-    color: var(--laranja);
+    color:
+        var(--laranja);
 
     border:
         1px solid rgba(255,90,31,.25);
@@ -1360,7 +1521,8 @@ p {
 
     fill: none;
 
-    stroke: currentColor;
+    stroke:
+        currentColor;
 
     stroke-width: 1.8;
 
@@ -1371,7 +1533,8 @@ p {
 .process-item h3 {
     margin-bottom: 10px;
 
-    color: var(--azul);
+    color:
+        var(--azul);
 
     font-size: 1.08rem;
 }
@@ -1384,7 +1547,7 @@ p {
 
 
 /* ==========================================================
-   CONTATO
+   34. CONTATO
 ========================================================== */
 
 .contact-section {
@@ -1412,7 +1575,8 @@ p {
 
     margin-bottom: 18px;
 
-    color: var(--azul);
+    color:
+        var(--azul);
 
     font-size:
         clamp(2rem, 4vw, 3.1rem);
@@ -1429,6 +1593,11 @@ p {
 
     line-height: 1.8;
 }
+
+
+/* ==========================================================
+   35. LISTA DE CONTATO
+========================================================== */
 
 .contact-list {
     display: flex;
@@ -1452,7 +1621,8 @@ p {
 
     border-radius: 10px;
 
-    background: var(--branco);
+    background:
+        var(--branco);
 
     transition:
         transform var(--transicao),
@@ -1461,7 +1631,8 @@ p {
 }
 
 .contact-item:hover {
-    transform: translateX(5px);
+    transform:
+        translateX(5px);
 
     border-color:
         rgba(255,90,31,.30);
@@ -1469,6 +1640,11 @@ p {
     box-shadow:
         0 8px 25px rgba(7,27,82,.06);
 }
+
+
+/* ==========================================================
+   36. ÍCONES DE CONTATO
+========================================================== */
 
 .contact-icon {
     width: 45px;
@@ -1481,7 +1657,8 @@ p {
     align-items: center;
     justify-content: center;
 
-    color: var(--laranja);
+    color:
+        var(--laranja);
 
     border:
         1px solid rgba(255,90,31,.22);
@@ -1498,7 +1675,8 @@ p {
 
     fill: none;
 
-    stroke: currentColor;
+    stroke:
+        currentColor;
 
     stroke-width: 1.8;
 
@@ -1511,7 +1689,8 @@ p {
 
     margin-bottom: 1px;
 
-    color: var(--texto-secundario);
+    color:
+        var(--texto-secundario);
 
     font-size: .72rem;
 
@@ -1520,14 +1699,15 @@ p {
 }
 
 .contact-item strong {
-    color: var(--azul);
+    color:
+        var(--azul);
 
     font-size: .9rem;
 }
 
 
 /* ==========================================================
-   FORMULÁRIO
+   37. FORMULÁRIO
 ========================================================== */
 
 .contact-form-wrapper {
@@ -1540,7 +1720,8 @@ p {
     border:
         1px solid var(--borda);
 
-    border-radius: var(--raio-grande);
+    border-radius:
+        var(--raio-grande);
 
     background:
         var(--branco);
@@ -1560,7 +1741,8 @@ p {
 .form-heading h3 {
     margin-bottom: 8px;
 
-    color: var(--azul);
+    color:
+        var(--azul);
 
     font-size: 1.55rem;
 
@@ -1570,6 +1752,11 @@ p {
 .form-heading p {
     font-size: .88rem;
 }
+
+
+/* ==========================================================
+   38. CAMPOS DO FORMULÁRIO
+========================================================== */
 
 .form-group {
     display: flex;
@@ -1582,7 +1769,8 @@ p {
 }
 
 .form-group label {
-    color: var(--azul);
+    color:
+        var(--azul);
 
     font-size: .78rem;
     font-weight: 700;
@@ -1605,7 +1793,8 @@ p {
     padding:
         13px 15px;
 
-    color: var(--texto);
+    color:
+        var(--texto);
 
     border:
         1px solid var(--borda);
@@ -1636,7 +1825,8 @@ p {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #98A2B3;
+    color:
+        #98A2B3;
 }
 
 .form-group input:focus,
@@ -1645,11 +1835,17 @@ p {
     border-color:
         var(--laranja);
 
-    background: var(--branco);
+    background:
+        var(--branco);
 
     box-shadow:
         0 0 0 4px rgba(255,90,31,.08);
 }
+
+
+/* ==========================================================
+   39. BOTÃO DO FORMULÁRIO
+========================================================== */
 
 .btn-submit {
     width: 100%;
@@ -1659,7 +1855,7 @@ p {
 
 
 /* ==========================================================
-   MAPS
+   40. MAPAS
 ========================================================== */
 
 .maps-section {
@@ -1667,7 +1863,8 @@ p {
 
     width: 100%;
 
-    background: var(--fundo-claro);
+    background:
+        var(--fundo-claro);
 }
 
 .v8-maps {
@@ -1688,14 +1885,15 @@ p {
 
 
 /* ==========================================================
-   FOOTER
+   41. FOOTER
 ========================================================== */
 
 .footer {
     background:
         var(--azul-escuro);
 
-    color: var(--branco);
+    color:
+        var(--branco);
 }
 
 .footer-grid {
@@ -1709,6 +1907,11 @@ p {
     padding:
         70px 0 55px;
 }
+
+
+/* ==========================================================
+   42. FOOTER BRAND
+========================================================== */
 
 .footer-brand {
     max-width: 310px;
@@ -1732,11 +1935,17 @@ p {
     line-height: 1.75;
 }
 
+
+/* ==========================================================
+   43. FOOTER LINKS
+========================================================== */
+
 .footer-links h4,
 .footer-contact h4 {
     margin-bottom: 17px;
 
-    color: var(--branco);
+    color:
+        var(--branco);
 
     font-size: .86rem;
 
@@ -1767,7 +1976,8 @@ p {
 
 .footer-links a:hover,
 .footer-contact a:hover {
-    color: var(--laranja);
+    color:
+        var(--laranja);
 }
 
 .footer-contact {
@@ -1777,6 +1987,11 @@ p {
 
     gap: 8px;
 }
+
+
+/* ==========================================================
+   44. FOOTER BOTTOM
+========================================================== */
 
 .footer-bottom {
     border-top:
@@ -1800,7 +2015,7 @@ p {
 
 
 /* ==========================================================
-   WHATSAPP FLUTUANTE
+   45. WHATSAPP FLUTUANTE
 ========================================================== */
 
 .whatsapp-float {
@@ -1819,7 +2034,8 @@ p {
     align-items: center;
     justify-content: center;
 
-    color: var(--branco);
+    color:
+        var(--branco);
 
     border-radius: 50%;
 
@@ -1835,7 +2051,8 @@ p {
 }
 
 .whatsapp-float:hover {
-    transform: translateY(-5px) scale(1.04);
+    transform:
+        translateY(-5px) scale(1.04);
 
     box-shadow:
         0 16px 35px rgba(37,211,102,.38);
@@ -1845,12 +2062,13 @@ p {
     width: 25px;
     height: 25px;
 
-    fill: currentColor;
+    fill:
+        currentColor;
 }
 
 
 /* ==========================================================
-   RESPONSIVO — TABLET
+   46. RESPONSIVO — TABLET
 ========================================================== */
 
 @media (max-width: 1050px) {
@@ -1861,6 +2079,10 @@ p {
 
     .header-container {
         gap: 18px;
+    }
+
+    .btn-header {
+        padding-inline: 15px;
     }
 
     .services-grid {
@@ -1890,7 +2112,7 @@ p {
 
 
 /* ==========================================================
-   RESPONSIVO — TABLET PEQUENO
+   47. RESPONSIVO — TABLET PEQUENO
 ========================================================== */
 
 @media (max-width: 850px) {
@@ -1928,7 +2150,7 @@ p {
 
 
 /* ==========================================================
-   RESPONSIVO — MOBILE
+   48. RESPONSIVO — MOBILE
 ========================================================== */
 
 @media (max-width: 700px) {
@@ -1969,9 +2191,12 @@ p {
     .nav {
         position: absolute;
 
-        top: calc(100% + 8px);
+        top:
+            calc(100% + 8px);
+
         left: 0;
         right: 0;
+
         transform: none;
 
         display: none;
@@ -1995,7 +2220,10 @@ p {
         box-shadow:
             0 20px 45px rgba(0,0,0,.25);
 
-        backdrop-filter: blur(15px);
+        backdrop-filter:
+            blur(15px);
+
+        z-index: 10;
     }
 
     .nav.active {
@@ -2024,6 +2252,8 @@ p {
 
     .menu-toggle {
         display: flex;
+
+        margin-left: auto;
     }
 
     .hero {
@@ -2038,7 +2268,8 @@ p {
         font-size:
             clamp(2.5rem, 13vw, 4rem);
 
-        letter-spacing: -.045em;
+        letter-spacing:
+            -.045em;
     }
 
     .hero p {
@@ -2078,7 +2309,8 @@ p {
     }
 
     .numbers {
-        padding: 45px 0;
+        padding:
+            45px 0;
     }
 
     .numbers-grid {
@@ -2089,7 +2321,8 @@ p {
     .number-item {
         min-height: 155px;
 
-        padding: 22px 18px;
+        padding:
+            22px 18px;
     }
 
     .number-icon {
@@ -2106,7 +2339,8 @@ p {
 
     .services-grid,
     .process-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .service-image {
@@ -2120,7 +2354,8 @@ p {
     }
 
     .v8-gallery {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .v8-gallery img {
@@ -2144,38 +2379,45 @@ p {
     }
 
     .contact-form {
-        padding: 25px 20px;
+        padding:
+            25px 20px;
     }
 
     .form-row {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
         gap: 0;
     }
 
     .footer-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
 
-        gap: 38px 25px;
+        gap:
+            38px 25px;
 
         padding:
             55px 0 40px;
     }
 
     .footer-brand {
-        grid-column: 1 / -1;
+        grid-column:
+            1 / -1;
 
-        max-width: 100%;
+        max-width:
+            100%;
     }
 
     .footer-bottom .container {
-        min-height: 58px;
+        min-height:
+            58px;
     }
 }
 
 
 /* ==========================================================
-   RESPONSIVO — MOBILE PEQUENO
+   49. RESPONSIVO — MOBILE PEQUENO
 ========================================================== */
 
 @media (max-width: 420px) {
@@ -2191,11 +2433,13 @@ p {
     }
 
     .brand img {
-        max-width: 145px;
+        max-width:
+            145px;
     }
 
     .hero {
-        min-height: 720px;
+        min-height:
+            720px;
     }
 
     .hero h1 {
@@ -2204,7 +2448,8 @@ p {
     }
 
     .hero .eyebrow {
-        font-size: .68rem;
+        font-size:
+            .68rem;
     }
 
     .section {
@@ -2213,11 +2458,13 @@ p {
     }
 
     .numbers-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .number-item {
-        min-height: 130px;
+        min-height:
+            130px;
     }
 
     .contact-form {
@@ -2226,51 +2473,76 @@ p {
     }
 
     .footer-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .footer-brand {
-        grid-column: auto;
+        grid-column:
+            auto;
     }
 
     .whatsapp-float {
-        right: 16px;
-        bottom: 16px;
+        right:
+            16px;
 
-        width: 48px;
-        height: 48px;
+        bottom:
+            16px;
+
+        width:
+            48px;
+
+        height:
+            48px;
     }
 
     .whatsapp-float svg {
-        width: 23px;
-        height: 23px;
+        width:
+            23px;
+
+        height:
+            23px;
     }
 }
 
 
 /* ==========================================================
-   ACESSIBILIDADE
+   50. ACESSIBILIDADE
 ========================================================== */
 
 :focus-visible {
     outline:
         3px solid rgba(255,90,31,.45);
 
-    outline-offset: 3px;
+    outline-offset:
+        3px;
 }
+
+
+/* ==========================================================
+   51. REDUÇÃO DE MOVIMENTO
+========================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
     html {
-        scroll-behavior: auto;
+        scroll-behavior:
+            auto;
     }
 
     *,
     *::before,
     *::after {
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .01ms !important;
-        scroll-behavior: auto !important;
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            .01ms !important;
+
+        scroll-behavior:
+            auto !important;
     }
 }
