@@ -3028,14 +3028,9 @@ a[data-v8] {
 }
 
 /* ==========================================================
-   51. BOTÃO FLUTUANTE WHATSAPP — V8
+  /* ==========================================================
+   51. WHATSAPP FLUTUANTE — ÍCONE CLÁSSICO
 ========================================================== */
-
-/*
-   Botão WhatsApp flutuante.
-   Mantém o botão visível no PC e no celular,
-   preso ao canto inferior direito da tela.
-*/
 
 .v8-floating,
 .v8-floating-button,
@@ -3046,46 +3041,53 @@ a[data-v8] {
 
     position: fixed !important;
 
-    right: 20px !important;
-    bottom: 20px !important;
+    right: 22px !important;
+    bottom: 22px !important;
 
     left: auto !important;
     top: auto !important;
 
     z-index: 99999 !important;
 
+    width: 60px !important;
+    height: 60px !important;
+
+    min-width: 60px !important;
+    min-height: 60px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
     display: flex !important;
 
     align-items: center !important;
     justify-content: center !important;
 
-    max-width: calc(100vw - 40px);
+    background: #25D366 !important;
+
+    color: #FFFFFF !important;
+
+    border: 0 !important;
+
+    border-radius: 50% !important;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, .22) !important;
+
+    text-decoration: none !important;
 
     visibility: visible !important;
     opacity: 1 !important;
 
     pointer-events: auto !important;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease !important;
 }
 
 
-/* Ícone/imagem dentro do botão */
-
-.v8-floating img,
-.v8-floating-button img,
-.v8-whatsapp img,
-.whatsapp-floating img,
-.whatsapp-button img,
-[data-v8="contact.whatsapp"] img {
-
-    max-width: 100%;
-
-    height: auto;
-
-    display: block;
-}
-
-
-/* SVG do WhatsApp */
+/* ÍCONE */
 
 .v8-floating svg,
 .v8-floating-button svg,
@@ -3094,26 +3096,61 @@ a[data-v8] {
 .whatsapp-button svg,
 [data-v8="contact.whatsapp"] svg {
 
-    display: block;
+    width: 32px !important;
+    height: 32px !important;
 
-    max-width: 100%;
+    max-width: 32px !important;
+    max-height: 32px !important;
+
+    fill: #FFFFFF !important;
+
+    color: #FFFFFF !important;
+
+    display: block !important;
 }
 
 
-/* Evita que o botão fique escondido em elementos pai */
+/* CASO O ÍCONE SEJA UMA IMAGEM */
 
-.v8-floating,
-.v8-floating-button,
-.v8-whatsapp,
-.whatsapp-floating,
-.whatsapp-button {
+.v8-floating img,
+.v8-floating-button img,
+.v8-whatsapp img,
+.whatsapp-floating img,
+.whatsapp-button img,
+[data-v8="contact.whatsapp"] img {
 
-    transform: none !important;
+    width: 32px !important;
+    height: 32px !important;
+
+    max-width: 32px !important;
+    max-height: 32px !important;
+
+    object-fit: contain !important;
+
+    display: block !important;
+}
+
+
+/* HOVER DESKTOP */
+
+.v8-floating:hover,
+.v8-floating-button:hover,
+.v8-whatsapp:hover,
+.whatsapp-floating:hover,
+.whatsapp-button:hover,
+[data-v8="contact.whatsapp"]:hover {
+
+    transform: translateY(-4px) scale(1.05) !important;
+
+    background: #20BD5A !important;
+
+    box-shadow:
+        0 12px 30px rgba(37, 211, 102, .35) !important;
 }
 
 
 /* ==========================================================
-   WHATSAPP — MOBILE
+   MOBILE
 ========================================================== */
 
 @media (max-width: 700px) {
@@ -3125,19 +3162,33 @@ a[data-v8] {
     .whatsapp-button,
     [data-v8="contact.whatsapp"] {
 
-        right: 15px !important;
+        right: 16px !important;
+        bottom: 16px !important;
 
-        bottom: 15px !important;
+        width: 58px !important;
+        height: 58px !important;
 
-        max-width:
-            calc(100vw - 30px);
+        min-width: 58px !important;
+        min-height: 58px !important;
+    }
+
+
+    .v8-floating svg,
+    .v8-floating-button svg,
+    .v8-whatsapp svg,
+    .whatsapp-floating svg,
+    .whatsapp-button svg,
+    [data-v8="contact.whatsapp"] svg {
+
+        width: 31px !important;
+        height: 31px !important;
     }
 
 }
 
 
 /* ==========================================================
-   WHATSAPP — CELULARES PEQUENOS
+   CELULARES PEQUENOS
 ========================================================== */
 
 @media (max-width: 420px) {
@@ -3149,12 +3200,26 @@ a[data-v8] {
     .whatsapp-button,
     [data-v8="contact.whatsapp"] {
 
-        right: 12px !important;
+        right: 13px !important;
+        bottom: 13px !important;
 
-        bottom: 12px !important;
+        width: 56px !important;
+        height: 56px !important;
 
-        max-width:
-            calc(100vw - 24px);
+        min-width: 56px !important;
+        min-height: 56px !important;
+    }
+
+
+    .v8-floating svg,
+    .v8-floating-button svg,
+    .v8-whatsapp svg,
+    .whatsapp-floating svg,
+    .whatsapp-button svg,
+    [data-v8="contact.whatsapp"] svg {
+
+        width: 30px !important;
+        height: 30px !important;
     }
 
 }
