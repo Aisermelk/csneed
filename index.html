@@ -1381,7 +1381,7 @@
 
                         <svg viewBox="0 0 24 24">
 
-                            <path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 0 5.4-5.4l-2.2 2.2-2-2-2.2 2.2Z"></path>
+                            <path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 0 5.4-5.4l-2.2 2.2-2-2-2.2-2.2Z"></path>
 
                             <path d="M17 17l3 3"></path>
 
@@ -2085,7 +2085,7 @@
 
 
     <!-- ======================================================
-         17. JAVASCRIPT DO MENU
+         17. JAVASCRIPT DO MENU + FORMULÁRIO WHATSAPP
          ====================================================== -->
 
     <script>
@@ -2186,6 +2186,131 @@
 
                     currentYear.textContent =
                         new Date().getFullYear();
+
+                }
+
+
+
+                /* ==================================================
+                   FORMULÁRIO → WHATSAPP
+                   O número é fornecido pelo V8 Loader
+                   ================================================== */
+
+                const contactForm =
+                    document.querySelector(
+                        '[data-v8-form="contact"]'
+                    );
+
+
+                if (contactForm) {
+
+                    contactForm.addEventListener(
+                        "submit",
+                        function (event) {
+
+                            event.preventDefault();
+
+
+                            /* ==========================================
+                               LOCALIZA O WHATSAPP CONFIGURADO NO V8
+                               ========================================== */
+
+                            const whatsappLink =
+                                document.querySelector(
+                                    '[data-v8="contact.whatsapp"]'
+                                );
+
+
+                            if (
+                                !whatsappLink ||
+                                !whatsappLink.href ||
+                                !whatsappLink.href.includes("wa.me/")
+                            ) {
+
+                                alert(
+                                    "Não foi possível localizar o WhatsApp. Tente novamente."
+                                );
+
+                                return;
+
+                            }
+
+
+                            /* ==========================================
+                               DADOS DO FORMULÁRIO
+                               ========================================== */
+
+                            const nome =
+                                document
+                                    .getElementById("nome")
+                                    ?.value
+                                    .trim() || "";
+
+
+                            const email =
+                                document
+                                    .getElementById("email")
+                                    ?.value
+                                    .trim() || "";
+
+
+                            const telefone =
+                                document
+                                    .getElementById("telefone")
+                                    ?.value
+                                    .trim() || "";
+
+
+                            const mensagem =
+                                document
+                                    .getElementById("mensagem")
+                                    ?.value
+                                    .trim() || "";
+
+
+                            /* ==========================================
+                               MENSAGEM QUE SERÁ ABERTA NO WHATSAPP
+                               ========================================== */
+
+                            const texto =
+`Olá! Vim pelo site da CSNEED e gostaria de solicitar um orçamento.
+
+Nome: ${nome}
+E-mail: ${email}
+Telefone: ${telefone || "Não informado"}
+
+Mensagem:
+${mensagem}`;
+
+
+                            /* ==========================================
+                               CRIA A URL DO WHATSAPP
+                               ========================================== */
+
+                            const whatsappUrl =
+                                new URL(
+                                    whatsappLink.href
+                                );
+
+
+                            whatsappUrl.searchParams.set(
+                                "text",
+                                texto
+                            );
+
+
+                            /* ==========================================
+                               ABRE O WHATSAPP
+                               ========================================== */
+
+                            window.open(
+                                whatsappUrl.toString(),
+                                "_blank",
+                                "noopener,noreferrer"
+                            );
+
+                        }
+                    );
 
                 }
 
